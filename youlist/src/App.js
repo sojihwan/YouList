@@ -7,16 +7,19 @@ import RightNav from './Nav/RightNav'
 import Body from './Body/Body'
 import View from './Body/View';
 import LeftNav from './Nav//LeftNav'
+import LogInPage from './LogIn/LogInPage'
+import Uplode from './Body/Uplode';
 
 function App() {
   return (
     <div>
       <Header></Header>
       <RightNav></RightNav>
-      
-      <Route path ="/" component = {Body} exact/>
       <Route path ="/view" component = {View} />
-      <Route path ="/view" component = {LeftNav} />
+      <Route path ="/LogIn" component = {LogInPage}/>
+      <Route path ="/Uplode" component = {Uplode} />
+      <LeftNav></LeftNav>
+      <Route path ="/" component = {Body} exact/>
     </div>
   );
 }
