@@ -9,6 +9,7 @@ function Uplode() {
       <input type="text"style={{width:"90%"}} required/><br/>
       <h3>태그</h3><br/>
       <input type="text"style={{width:"90%"}} required/><br/>
+      <button className="btn btn-warning" style={{width:"100px",height:"50px",background:'#2F4F4F'}}>올리기</button>
     </bady>
   )
 }

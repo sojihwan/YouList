@@ -10,6 +10,7 @@ function Nav (){
         <br/>미완성
         <br/>
         <select multiple className="form-control">
+          <option>추천</option>
           <option>웃긴</option>
           <option>음악</option>
           <option>애니메이션</option>
