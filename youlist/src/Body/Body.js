@@ -26,9 +26,19 @@ function Bady (props){
           <td>#음악 #신나는 #힐링</td>
         </tr>
         <tr>
+        <td onClick={() => props.setData("aMaencWqIhY")}><Link to="/View" style={{textDecoration:"none",color:"#FFFFFF"}} onClick={onClick}>I recreated Line Rider in 3D and the result feels cursed</Link></td>
+          <td>{num}회</td>
+          <td>#음악 #신나는 #힐링</td>
+        </tr>
+        <tr>
         <td onClick={() => props.setData("Y88ezQ8bpfE")}><Link to="/View" style={{textDecoration:"none",color:"#FFFFFF"}} onClick={onClick}>I Synchronized my Minecraft World to Music</Link></td>
           <td>{num}회</td>
           <td>#음악 #신나는 #힐링</td>
+        </tr>
+        <tr>
+        <td onClick={() => props.setData("5kq_gkOs3Y4")}><Link to="/View" style={{textDecoration:"none",color:"#FFFFFF"}} onClick={onClick}>언더 플레이어 영화-FULL 【Undertale Comic Dub】</Link></td>
+          <td>{num}회</td>
+          <td>#애니메이션 #신나는</td>
         </tr>
         <tr>
         <td onClick={() => props.setData("a5jNUlwfGxg")}><Link to="/View" style={{textDecoration:"none",color:"#FFFFFF"}} onClick={onClick}>Minecraft Dreams (Music Sync - 4k60fps)</Link></td>

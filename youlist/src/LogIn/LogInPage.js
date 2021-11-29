@@ -5,13 +5,13 @@ import 'bootstrap/dist/css/bootstrap.css';
 function Modal (){
   const [Log, setLog] = useState({
     id: '',
-    pw: ''
+    pw: '',
   });
 
   const { id, pw } = Log; 
 
   const onChange = (e) => {
-    const { value, id } = e.target; 
+    const { id, value } = e.target; 
     setLog({
       ...Log,
       [id]: value 
@@ -22,6 +22,10 @@ function Modal (){
     if(id===""||pw===""){
       alert("아이디 또는 패스워드가 비어있습니다.")
     }
+    setLog({
+      id:"",
+      pw:""
+    })
   };
 
   return(
