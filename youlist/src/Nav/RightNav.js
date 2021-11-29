@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { Link } from 'react-router-dom';
 
 function Nav (){
+  const d=0
   return(
     <nav style={{background:'#DCDCDC',width:'30%',height:'550px'}} className="center-block">
       <h1 style={{textAlign:'center'}}>
@@ -10,13 +11,14 @@ function Nav (){
         <br/>미완성
         <br/>
         <select multiple className="form-control">
-          <option>추천</option>
+          <option onClick={d}>추천</option>
           <option>웃긴</option>
           <option>음악</option>
           <option>애니메이션</option>
           <option>감상</option>
           <option>게임</option>
           <option>공부</option>
+          <option>힐링</option>
         </select>
         <strong>업로드</strong>
         <br/>

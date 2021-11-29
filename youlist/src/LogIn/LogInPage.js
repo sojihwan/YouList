@@ -4,8 +4,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 function Modal (){
   const [Log, setLog] = useState({
-    id: ' ',
-    pw: ' '
+    id: '',
+    pw: ''
   });
 
   const { id, pw } = Log; 
