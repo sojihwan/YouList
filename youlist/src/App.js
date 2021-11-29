@@ -23,7 +23,7 @@ function App() {
       <RightNav></RightNav>
       <Route path ="/view"  component={()=> <View name={data}/>}/>
       <Route path ="/LogIn" component = {LogInPage}/>
-      <Route path ="/Uplode" component = {Uplode} />
+      <Route path ="/Uplode" component = {()=> <Uplode setData={setData}/>} />
       <LeftNav></LeftNav>
       <Route path ="/" component = {()=> <Body setData={setData}/>} exact/>
     </div>

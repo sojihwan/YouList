@@ -25,7 +25,16 @@ function Bady (props){
           <td>{num}회</td>
           <td>#음악 #신나는 #힐링</td>
         </tr>
-        
+        <tr>
+        <td onClick={() => props.setData("Y88ezQ8bpfE")}><Link to="/View" style={{textDecoration:"none",color:"#FFFFFF"}} onClick={onClick}>I Synchronized my Minecraft World to Music</Link></td>
+          <td>{num}회</td>
+          <td>#음악 #신나는 #힐링</td>
+        </tr>
+        <tr>
+        <td onClick={() => props.setData("a5jNUlwfGxg")}><Link to="/View" style={{textDecoration:"none",color:"#FFFFFF"}} onClick={onClick}>Minecraft Dreams (Music Sync - 4k60fps)</Link></td>
+          <td>{num}회</td>
+          <td>#음악 #신나는 #힐링</td>
+        </tr>
       </table>
     </bady>
   )
