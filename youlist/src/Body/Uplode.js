@@ -9,7 +9,7 @@ function Uplode() {
       <h3>링크</h3><br/>
       <input type="text"style={{width:"90%"}} required/><br/>
       <h3>태그</h3><br/>
-      <input type="text"style={{width:"90%"}} required/><br/>
+      <input type="text"style={{width:"90%"}} required value="#웃긴 #공부 #음악 #애니메이션"/><br/>
       <button className="btn btn-warning" style={{width:"100px",height:"50px",background:'#2F4F4F'}}s>올리기</button>
     </bady>
   )

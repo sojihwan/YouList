@@ -3,31 +3,38 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 
 function Modal (){
-  const [Log,setLog] = useState({
-    id: "",
-    pw: ""
+  const [Log, setLog] = useState({
+    id: ' ',
+    pw: ' '
   });
-  
-  const {id ,pw} =Log
 
-  function iog(){
-    
-    if(Log===" "){
-      alert("비밀번호 또는 아이디을 입력해주세요")
+  const { id, pw } = Log; 
+
+  const onChange = (e) => {
+    const { value, id } = e.target; 
+    setLog({
+      ...Log,
+      [id]: value 
+    });
+  };
+
+  const onReset = () => {
+    if(id===""||pw===""){
+      alert("아이디 또는 패스워드가 비어있습니다.")
     }
-  }
+  };
 
   return(
     <bady style={{background:'#2F4F4F',width:'70%',height:'550px',position:'fixed',top:'220px',left:'30%'}} className="center-block">
           <p style={{position:"absolute",top:"25%",left:"20%",width:"40%",height:"30%",backgroundColor:"#DCDCDC"}}>
             <p style={{position:"absolute",top:"15%",left:"20%"}}>
               ID<br/>
-              <input name="id" type="text" value="id"/>
+              <input name="id" type="text" value={id} onChange={onChange}/>
               <br/> 
               PW<br/>
-              <input name="pw" type="password" value="pw"/>
+              <input name="pw" type="password" value={pw} onChange={onChange}/>
             </p>
-            <button style={{position:"absolute",top:"25%",left:"65%",width:"20%",height:"60%"}} onClick={iog}>LONIN</button>
+            <button style={{position:"absolute",top:"25%",left:"65%",width:"20%",height:"60%"}} onClick={onReset}>LONIN</button>
           </p>
     </bady>
   )

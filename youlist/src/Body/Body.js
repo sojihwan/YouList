@@ -20,10 +20,9 @@ function Bady (){
           <td>#공부 #리엑트</td>
         </tr>
         <tr>
-          <td>테스트</td>
-          <td>테스트</td>
-          <td>테스트</td>
-          <td>테스트</td>
+        <td onClick={onClick}><Link to="/View" style={{textDecoration:"none",color:"#FFFFFF"}}>🔥Best NCS Gaming Music 2020 Mix ♫ Top 50 NCS Songs, Trap x Bass x Dubstep x House ♫ Best Of EDM 2020</Link></td>
+          <td>{num}회</td>
+          <td>#공부 #리엑트</td>
         </tr>
       </table>
     </bady>
