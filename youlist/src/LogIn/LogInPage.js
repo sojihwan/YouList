@@ -11,12 +11,14 @@ function Modal (){
   const { id, pw } = Log; 
 
   const onChange = (e) => {
-    const { id, value } = e.target; 
-    setLog({
-      ...Log,
-      [id]: value 
-    });
-  };
+ const { id, value } = e.target   
+ const nextInputs = {
+         ...Log,  
+         [id]: value,
+     }
+     setLog(nextInputs)       
+
+ }
 
   const onReset = () => {
     if(id===""||pw===""){

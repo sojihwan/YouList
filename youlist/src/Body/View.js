@@ -3,7 +3,6 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 function View (props){
   const like =`https://www.youtube.com/embed/${props.name}`
-  console.log(like);
   return(
     <bady style={{background:'#2F4F4F',width:'60%',height:'550px',position:'absolute',top:'220px',left:'30%'}} className="center-block">
 
