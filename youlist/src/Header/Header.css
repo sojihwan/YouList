@@ -1,0 +1,71 @@
+header:hover{
+  animation-name: i;
+  animation-duration: 5s;
+  animation-iteration-count:infinite
+}
+
+@keyframes i {
+  0%{
+    color: #FFF;
+  }
+  5%{
+    color: rgb(255, 0, 0);
+  }
+  10%{
+    color: rgb(255, 145, 0);
+  }
+  15%{
+    color: rgb(255, 255, 0);
+  }
+  20%{
+    color: rgb(0, 255, 0);
+  }
+  25%{
+    color: rgb(0, 89, 255)
+  }
+  30%{
+    color: rgb(89, 0, 255);
+  }
+  35%{
+    color: rgb(255, 0, 255);
+  }
+  40%{
+    color: rgb(1, 255, 192);
+  }
+  45%{
+    color: rgb(102, 255, 0);
+  }
+  50%{
+    color: rgb(255, 0, 0);
+  }
+  55%{
+    color: rgb(255, 0, 0);
+  }
+  60%{
+    color: rgb(102, 255, 0);
+  }
+  65%{
+    color: rgb(1, 255, 192);
+  }
+  70%{
+    color: rgb(255, 0, 255);
+  }
+  75%{
+    color: rgb(89, 0, 255);
+  }
+  80%{
+    color: rgb(0, 89, 255)
+  }
+  85%{
+    color: rgb(0, 255, 0);
+  }
+  90%{
+    color: rgb(255, 255, 0);
+  }
+  95%{
+    color: rgb(255, 145, 0);
+  }
+  100%{
+    color: rgb(255, 0, 0);
+  }
+}

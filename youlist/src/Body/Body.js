@@ -8,10 +8,29 @@ function Bady (props){
   function onClick() {
     num=num+1;
   }
+  function list(){
+    var MyListArry = [
+      {'이름':props.Data ,'조회수':num ,'태그':''},
+    ]
+    buildTable(MyListArry)
+
+    function buildTable(data){
+      var table = document.getElementsById('list')
+
+      for (let i = 0; i < data.length; i++) {
+        var row = `<tr>
+                      <td onClick={() => props.setData("LclObYwGj90")}><Link to="/View" style={{textDecoration:"none",color:"#FFFFFF"}} onClick={onClick}>${data[i].이름}</td>
+                      <td>${data[i].조회수}회</td>
+                      <td>${data[i].태그}</td>
+                   </tr>`
+        table.innerHTML +=row
+      }
+    }
+  }
 
   return(
     <bady style={{background:'#2F4F4F',width:'70%',height:'550px',position:'absolute',top:'220px',left:'30%'}} className="center-block">
-      <table className="table table-striped">
+      <table className="table table-striped" id="list">
         <th>이름</th>
         <th>조회수</th>
         <th>태그</th>

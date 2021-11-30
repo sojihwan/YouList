@@ -8,9 +8,8 @@ import RightNav from './Nav/RightNav'
 import Body from './Body/Body'
 import View from './Body/View';
 import LeftNav from './Nav//LeftNav'
-import LogInPage from './LogIn/LogInPage'
 import Uplode from './Body/Uplode';
-import join from './Body/Join';
+
 
 function App() {
 
@@ -23,9 +22,7 @@ function App() {
       <Header></Header>
       <RightNav></RightNav>
       <Route path ="/View"  component={()=> <View name={data}/>}/>
-      <Route path ="/LogIn" component = {LogInPage}/>
       <Route path ="/Uplode" component = {()=> <Uplode setData={setData}/>} />
-      <Route path ="join" component ={join}/>
       <LeftNav></LeftNav>
       <Route path ="/" component = {()=> <Body setData={setData}/>} exact/>
     </div>
