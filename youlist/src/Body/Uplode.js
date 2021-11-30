@@ -1,3 +1,4 @@
+/* eslint-disable no-sequences */
 import React,{useState} from "react";
 
 function Uplode(props) {
@@ -39,10 +40,27 @@ function Uplode(props) {
       />
        <br/>
       <h3>맨 뒤 / 다음 링크</h3><br/>
-      <input type="text"style={{width:"90%"}} required name="like" onChange={onChange} value={like}/><br/>
+      <input 
+        type="text"
+        style={{width:"90%"}} 
+        name="like" 
+        onChange={onChange} 
+        value={like}
+      /><br/>
       <h3>태그</h3><br/>
-      <input type="text"style={{width:"90%"}} required name="tag" value={tag} onChange={onChange}/><br/>
-      <button className="btn btn-warning" style={{width:"100px",height:"50px",background:'#2F4F4F'}}onClick={() => props.setData(),onReset}>올리기</button>
+      <input 
+        type="text"
+        style={{width:"90%"}} 
+        name="tag" 
+        value={tag} 
+        onChange={onChange}
+      /><br/>
+      <button 
+        className="btn btn-warning" 
+        style={{width:"100px",height:"50px",background:'#2F4F4F'}}
+        onClick={() => props.setData(),onReset}>
+          올리기
+      </button>
     </bady>
   )
 }

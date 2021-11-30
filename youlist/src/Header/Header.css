@@ -3,10 +3,9 @@ header:hover{
   animation-duration: 5s;
   animation-iteration-count:infinite
 }
-
 @keyframes i {
   0%{
-    color: #FFF;
+    color: #000;
   }
   5%{
     color: rgb(255, 0, 0);
