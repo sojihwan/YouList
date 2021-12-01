@@ -1,3 +1,4 @@
+/* eslint-disable no-sequences */
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -13,9 +14,14 @@ import Uplode from './Body/Uplode';
 
 function App() {
 
-  const [data, setData] = useState("initial data");
-  
-
+  const [data, setData] = useState({
+    title: "",
+    tag:"",
+    like:""
+  });
+  const a = () => {
+    console.log(data.like)
+  }
   return (
     <div>
 
@@ -24,7 +30,8 @@ function App() {
       <Route path ="/View"  component={()=> <View name={data}/>}/>
       <Route path ="/Uplode" component = {()=> <Uplode setData={setData}/>} />
       <LeftNav></LeftNav>
-      <Route path ="/" component = {()=> <Body setData={setData}/>} exact/>
+      <Route path ="/" component = {()=> <Body Data={data} setData={setData}/>} exact/>
+      <button onClick={a}>aaa</button>
     </div>
   );
 }

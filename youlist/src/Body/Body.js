@@ -10,7 +10,7 @@ function Bady (props){
   }
   function list(){
     var MyListArry = [
-      {'이름':props.name ,'조회수':num ,'태그':''},
+      {'이름':props.data.title ,'조회수':num ,'태그':props.data.tag},
     ]
     buildTable(MyListArry)
 
@@ -19,7 +19,7 @@ function Bady (props){
       for (let i = 0; i < data.length; i++) {
         
         var row = `<tr>
-                      <td onClick={() => props.setData("LclObYwGj90")}><Link to="/View" style={{textDecoration:"none",color:"#FFFFFF"}} onClick={onClick}>${data[i].이름}</td>
+                      <td onClick={() => props.setData(props.data.like)}><Link to="/View" style={{textDecoration:"none",color:"#FFFFFF"}} onClick={onClick}>${data[i].이름}</td>
                       <td>${data[i].조회수}회</td>
                       <td>#${data[i].태그}</td>
                    </tr>`
@@ -29,8 +29,8 @@ function Bady (props){
   }
 
   return(
-    <bady style={{background:'#2F4F4F',width:'70%',height:'550px',position:'absolute',top:'220px',left:'30%'}} className="center-block">
-      <table className="table table-striped" name="list1">
+    <bady style={{background:'#000000',width:'70%',height:'550px',position:'absolute',top:'220px',left:'30%'}} className="center-block">
+      <table className="table table-striped" name="list1" style={{color:"#FFFFFF"}}>
         <th>이름</th>
         <th>조회수</th>
         <th>태그</th>
@@ -65,7 +65,7 @@ function Bady (props){
           <td>#음악 #신나는 #힐링</td>
         </tr>
       </table>
-      <button className="btn btn-success"onClick={list}><Link to="/" style={{textDecoration:"none",color:"#FFFFFF"}}>리로드</Link></button>
+      <button className="btn btn-success"onClick={list} style={{backgroundColor:"#000000"}}><Link to="/" style={{textDecoration:"none",color:"#FFFFFF"}}>reload</Link></button>
     </bady>
   )
 }

@@ -1,39 +1,36 @@
+/* eslint-disable no-use-before-define */
 /* eslint-disable no-sequences */
 import React,{useState} from "react";
+import { Link } from "react-router-dom";
 
 function Uplode(props) {
   const [Log, setLog] = useState({
-    title: '',
-    like: '',
-    tag:'',
+    title: "",
+    tag:"",
+    like:""
   });
-
-  const { title,like,tag  } = Log; 
+  const {title,like,tag} = Log;
 
   const onChange = (e) => {
- const { title, value } = e.target;   
+    const { name, value } = e.target;
     setLog({
       ...Log,
-      [title]:value,
+      [name]: value,
     });
- };
+    console.log(Log);
+  };
 
   const onReset = () => {
     if(title===""||like===""){
       alert("링크 또는 제목이 비어있습니다.")
     }
-    setLog({
-      title:"",
-      like:"",
-      tag:""
-    })
   };
   return(
-    <bady style={{background:'#2F4F4F',width:'60%',height:'550px',position:'absolute',top:'220px',left:'30%'}} className="center-block">
+    <bady style={{background:'#000000',width:'60%',height:'550px',position:'absolute',top:'220px',left:'30%',color:"#FFFFFF"}} className="center-block">
       <h3>제목</h3><br/>
       <input 
           type="text"
-          style={{width:"90%"}} 
+          style={{width:"90%",}} 
           name="title"
           onChange={onChange} 
           value={title} 
@@ -57,9 +54,11 @@ function Uplode(props) {
       /><br/>
       <button 
         className="btn btn-warning" 
-        style={{width:"100px",height:"50px",background:'#2F4F4F'}}
-        onClick={() => props.setData(),onReset}>
-          올리기
+        style={{width:"100px",height:"50px",background:'#000000'}}
+        onClick={() => props.setData(setLog),onReset}>
+          <Link to="/"style={{textDecoration:"none",color:"#FFFFFF"}}>
+            올리기
+          </Link>
       </button>
     </bady>
   )

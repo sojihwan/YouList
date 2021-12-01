@@ -4,14 +4,21 @@ import { Link } from 'react-router-dom';
 
 function Nav (){
   return(
-    <nav style={{background:'#DCDCDC',width:'10%',height:'550px',position:'absolute',top:'220px',left:'90%'}} className="center-block">
+    <nav style={{background:'#DCDCDC',width:'20%',height:'550px',position:'absolute',top:'220px',left:'80%'}} className="center-block">
       <h2 style={{textAlign:'center'}}>
         <strong>이동</strong>
-        <button className="btn btn-success"style={{width:'100%'}}>앞으로</button>
+        <p>
         <br/>
-        <button className="btn btn-success"style={{width:'100%'}}><Link to="/" style={{textDecoration:"none",color:"#000000"}}>리스트로</Link></button>
+        다음 영상<br/>
+        영상이름<br/>
         <br/>
-        <button className="btn btn-success"style={{width:'100%'}}>뒤로</button>
+        </p>
+        <Link to="/" style={{textDecoration:"none",color:"#000000"}}>리스트로</Link><br/>
+        <br/>
+        <p>
+        이전 영상<br/>
+        영상이름<br/>
+        </p>
         </h2>
     </nav>
   )
