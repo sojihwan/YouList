@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function Nav (){
   return(
-    <nav style={{background:'#DCDCDC',width:'20%',height:'550px',position:'absolute',top:'220px',left:'80%'}} className="center-block">
+    <nav style={{padding:"5px",borderRadius:"20PX",background:'#DCDCDC',width:'20%',height:'550px',position:'absolute',top:'220px',left:'80%'}} className="center-block">
       <h2 style={{textAlign:'center'}}>
         <strong>이동</strong>
         <p>

@@ -10,7 +10,7 @@ function Bady (props){
   }
   function list(){
     var MyListArry = [
-      {'이름':props.data.title ,'조회수':num ,'태그':props.data.tag},
+      {'이름':[props.data],'태그':[props.data.tag]},
     ]
     buildTable(MyListArry)
 
@@ -19,8 +19,8 @@ function Bady (props){
       for (let i = 0; i < data.length; i++) {
         
         var row = `<tr>
-                      <td onClick={() => props.setData(props.data.like)}><Link to="/View" style={{textDecoration:"none",color:"#FFFFFF"}} onClick={onClick}>${data[i].이름}</td>
-                      <td>${data[i].조회수}회</td>
+                      <td onClick={() => props.setData([props.data.like])}><Link to="/View" style={{textDecoration:"none",color:"#FFFFFF"}} onClick={onClick}>${data[i].이름}</td>
+                      <td>회</td>
                       <td>#${data[i].태그}</td>
                    </tr>`
         table.innerHTML =row
@@ -29,10 +29,10 @@ function Bady (props){
   }
 
   return(
-    <bady style={{background:'#000000',width:'70%',height:'550px',position:'absolute',top:'220px',left:'30%'}} className="center-block">
+    <bady style={{paddingLeft:"10px",background:'#000000',width:'70%',height:'550px',position:'absolute',top:'220px',left:'30%'}} className="center-block">
       <table className="table table-striped" name="list1" style={{color:"#FFFFFF"}}>
         <th>이름</th>
-        <th>조회수</th>
+        <th>dk</th>
         <th>태그</th>
         <tr>
           <td onClick={() => props.setData("LclObYwGj90")}><Link to="/View" style={{textDecoration:"none",color:"#FFFFFF"}} onClick={onClick}>React 기초 0강 : 리액트왜 쓰는지 알려줌 (+ 수강시 필요 사전지식)</Link></td>

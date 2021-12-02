@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 
 function Nav (){
   return(
-    <nav style={{background:'#DCDCDC',width:'30%',height:'550px'}} className="center-block">
+    <nav style={{padding:"5px",background:'#DCDCDC',width:'30%',height:'550px',borderRadius:"20PX"}} className="center-block">
       <h1 style={{textAlign:'center'}}>
         <strong>태그</strong>
         <br/>미완성
         <br/>
-        <select multiple className="form-control">
+        <select className="form-control" style={{textAlign:"center"}}>
           <option>추천</option>
           <option>웃긴</option>
           <option>음악</option>
@@ -22,7 +22,7 @@ function Nav (){
         <strong>업로드</strong>
         <br/>
         <Link to="/uplode" style={{textDecoration:"none",color:"#000000"}}>
-        <select multiple className="form-control">
+        <select className="form-control"style={{textAlign:"center"}}>
           <option>웃긴-업로드</option>
           <option>음악-업로드</option>
           <option>애니메이션-업로드</option>
