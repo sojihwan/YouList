@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Link } from 'react-router-dom';
 
-function Nav (){
+function LeftNav (){
   return(
     <nav style={{padding:"5px",borderRadius:"20PX",background:'#DCDCDC',width:'20%',height:'550px',position:'absolute',top:'220px',left:'80%'}} className="center-block">
       <h2 style={{textAlign:'center'}}>
@@ -23,4 +23,4 @@ function Nav (){
     </nav>
   )
 }
-export default Nav;
+export default LeftNav;

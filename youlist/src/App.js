@@ -17,12 +17,11 @@ function App() {
   const [data, setData] = useState('');
   const [datas, setDatas] = useState([]);
   const a = () => {
-    console.log(data)
+    console.log(datas)
   }
   return (
     <div style={{backgroundColor:"black"}}>
       <Header></Header>
-
       <RightNav></RightNav>
       <Route path ="/View"  component={()=> <View name={data}/>}/>
       <Route path ="/Uplode" component = {()=> <Uplode setDatas={setDatas}/>} />

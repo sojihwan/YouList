@@ -27,7 +27,7 @@ function Uplode(props) {
     }
   };
   return(
-    <bady style={{padding:"10px",background:'#000000',width:'60%',height:'550px',position:'absolute',top:'220px',left:'30%',color:"#FFFFFF"}} className="center-block">
+    <body style={{padding:"10px",background:'#000000',width:'60%',height:'550px',position:'absolute',top:'220px',left:'30%',color:"#FFFFFF"}} className="center-block">
       <h3>제목</h3><br/>
       <input 
           type="text"
@@ -62,7 +62,7 @@ function Uplode(props) {
             올리기
           </Link>
       </button>
-    </bady>
+    </body>
   )
 }
 

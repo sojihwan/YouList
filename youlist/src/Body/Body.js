@@ -2,17 +2,23 @@ import React, { useState } from 'react';
 import {Link} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.css';
 
-function Listadd({listnum},props,key){
+function Listadd({listnum},props){
   return(
     <tr>
-      <td><Link to="/View" style={{textDecoration:"none",color:"#FFFFFF"}}onClick={() => props({key})}>{listnum.title}</Link></td>
+      <td onClick={() => props(listnum.like)}><Link to="/View" style={{textDecoration:"none",color:"#FFFFFF"}}>{listnum.title}</Link></td>
       <td><button className='btn btn-default' style={{color:'#FFFFFF'}}>삭제</button></td>
-      <td>{listnum.tag}</td>
+      <td style={{color:'#FFFFFF'}}>{listnum.tag}</td>
     </tr>
   );
 }
+function test() {
+  console.log('보고싶다 props ');
 
-function Bady (props){
+}
+
+
+
+function Body (props){
   const [lists,setLists] =useState([
     {
       title:'React 기초 0강 : 리액트왜 쓰는지 알려줌 (+ 수강시 필요 사전지식)',
@@ -55,19 +61,25 @@ function Bady (props){
  setLists([...lists, list])
   };
   return(
-    <bady style={{paddingLeft:"10px",background:'#000000',width:'70%',height:'550px',position:'absolute',top:'220px',left:'30%'}} className="center-block">
+    <body style={{paddingLeft:"10px",background:'#000000',width:'70%',height:'550px',position:'absolute',top:'220px',left:'30%'}} className="center-block">
       <table className="table table-striped" name="list1" style={{color:"#FFFFFF"}}>
-        <th>이름</th>
-        <th>dk</th>
-        <th>태그</th>
-        {
-          lists.map(
-            listnum => (<Listadd listnum={listnum} props={props.setData} key={listnum.like}/>)
-          )
-        }
+        <thead>
+          <tr>
+            <th>이름</th>
+            <th>삭제</th>
+            <th>태그</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            lists.map(
+              listnum => (<Listadd listnum={listnum} props={props.setData} key={listnum.like}/>)
+            )
+          }
+        </tbody>
       </table>
       <button className="btn btn-success"onClick={addlist} style={{backgroundColor:"#000000"}}>reload</button>
-    </bady>
+    </body>
   )
 }
-export default Bady;
+export default Body;
