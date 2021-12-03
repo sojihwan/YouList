@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-duplicate-props */
 /* eslint-disable no-use-before-define */
 /* eslint-disable no-sequences */
 import React,{useState} from "react";
@@ -55,8 +56,9 @@ function Uplode(props) {
       <button 
         className="btn btn-warning" 
         style={{width:"100px",height:"50px",background:'#000000'}}
+        onClick={onReset}
         >
-          <Link to="/"style={{textDecoration:"none",color:"#FFFFFF"}}onClick={() => props.setLike({Log}),onReset}>
+          <Link to="/"style={{textDecoration:"none",color:"#FFFFFF"}}onClick={() =>props.setDatas([{title},{like},{tag}])}>
             올리기
           </Link>
       </button>
@@ -64,4 +66,4 @@ function Uplode(props) {
   )
 }
 
-export default Uplode
+export default Uplode 

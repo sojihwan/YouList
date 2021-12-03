@@ -15,24 +15,19 @@ import Uplode from './Body/Uplode';
 function App() {
 
   const [data, setData] = useState('');
-  const [likes, setLike] = useState({
-    title:'',
-    like:'',
-    tag:''
-  });
+  const [datas, setDatas] = useState([]);
   const a = () => {
-    console.log(likes)
+    console.log(data)
   }
   return (
     <div style={{backgroundColor:"black"}}>
-
       <Header></Header>
-      
+
       <RightNav></RightNav>
       <Route path ="/View"  component={()=> <View name={data}/>}/>
-      <Route path ="/Uplode" component = {()=> <Uplode setLike={setLike}/>} />
+      <Route path ="/Uplode" component = {()=> <Uplode setDatas={setDatas}/>} />
       <LeftNav></LeftNav>
-      <Route path ="/" component = {()=> <Body like={likes} setData={setData}/>} exact/>
+      <Route path ="/" component = {()=> <Body datas={[datas],[setData]}/>} exact/>
       <button onClick={a}>aaa</button>
     </div>
   );
