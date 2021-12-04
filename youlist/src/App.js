@@ -26,7 +26,7 @@ function App() {
       <Route path ="/View"  component={()=> <View name={data}/>}/>
       <Route path ="/Uplode" component = {()=> <Uplode setDatas={setDatas}/>} />
       <LeftNav></LeftNav>
-      <Route path ="/" component = {()=> <Body datas={[datas],[setData]}/>} exact/>
+      <Route path ="/" component = {()=> <Body datads={datas} setData={setData}/>} exact/>
       <button onClick={a}>aaa</button>
     </div>
   );

@@ -11,10 +11,9 @@ function Listadd({listnum},props){
     </tr>
   );
 }
-function test() {
-  console.log('보고싶다 props ');
-
-}
+// function test() {
+//   console.log('보고싶다 props ');
+// }
 
 
 
