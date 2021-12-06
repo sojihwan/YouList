@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 
 function RightNav (){
   return(
-    <nav style={{padding:"5px",background:'#DCDCDC',width:'30%',height:'550px',borderRadius:"20PX"}} className="center-block">
+    <nav style={{padding:"5px",background:'#DCDCDC',width:'20%',height:'550px',borderRadius:"20PX"}} className="center-block">
       <h1 style={{textAlign:'center'}}>
         <strong>태그</strong>
         <br/>미완성
         <br/>
-        <select className="form-control" style={{textAlign:"center"}}>
+        <select className="btn btn-secondary dropdown-toggle" style={{textAlign:"center"}}>
           <option>추천</option>
           <option>웃긴</option>
           <option>음악</option>
@@ -18,11 +18,11 @@ function RightNav (){
           <option>게임</option>
           <option>공부</option>
           <option>힐링</option>
-        </select>
+        </select><br/>
         <strong>업로드</strong>
         <br/>
         <Link to="/uplode" style={{textDecoration:"none",color:"#000000"}}>
-        <select className="form-control"style={{textAlign:"center"}}>
+        <select className="btn btn-secondary dropdown-toggle"style={{textAlign:"center"}}>
           <option>웃긴-업로드</option>
           <option>음악-업로드</option>
           <option>애니메이션-업로드</option>
@@ -30,6 +30,7 @@ function RightNav (){
           <option>게임-업로드</option>
         </select>
         </Link>
+        <br/>
         </h1>
     </nav>
   )

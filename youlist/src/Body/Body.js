@@ -4,10 +4,14 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 
 function Listadd({listnum},props){
+  function aaaa(){
+    console.log(props)
+    console.log(listnum)
+  }
   return(
     <tr>
       <td onClick={() => props(listnum.like)}><Link to="/View" style={{textDecoration:"none",color:"#FFFFFF"}}>{listnum.title}</Link></td>
-      <td><button className='btn btn-default' style={{color:'#FFFFFF'}}>삭제</button></td>
+      <td><button className='btn btn-default' style={{color:'#FFFFFF'}} onClick={aaaa}>삭제</button></td>
       <td style={{color:'#FFFFFF'}}>{listnum.tag}</td>
     </tr>
   );
@@ -53,33 +57,36 @@ function Body (props){
     
   ])
   const addlist = () =>{
-    const list = {
-      title:props.datas[0],
-      like:props.datas[1],
-      tag:props.datas[2]
-    }
- setLists([...lists, list])
-  };
+    console.log(props.datads)
+    if(props.datads && props.datads.length > 0) {
+			console.log(props.datads[0]);
+        
+      
+      console.log(lists)
+  setLists([...lists,props.datads[0],props.datads[1],props.datads[2]])
+      console.log(lists)
+    };
+  }
   return(
-    <body style={{paddingLeft:"10px",background:'#000000',width:'70%',height:'550px',position:'absolute',top:'220px',left:'30%'}} className="center-block">
-      <table className="table table-striped" name="list1" style={{color:"#FFFFFF"}}>
-        <thead>
-          <tr>
-            <th>이름</th>
-            <th>삭제</th>
-            <th>태그</th>
-          </tr>
-        </thead>
-        <tbody>
-          {
-            lists.map(
-              listnum => (<Listadd listnum={listnum} props={props.setData} key={listnum.like}/>)
-            )
-          }
-        </tbody>
-      </table>
-      <button className="btn btn-success"onClick={addlist} style={{backgroundColor:"#000000"}}>reload</button>
-    </body>
+    <div style={{paddingLeft:"10px",background:'#000000',width:'60%',height:'550px',position:'absolute',top:'220px',left:'20%'}} className="center-block">
+        <table className="table table-striped" name="list1" style={{color:"#FFFFFF"}}>
+          <thead>
+            <tr>
+              <th>이름</th>
+              <th>삭제</th>
+              <th>태그</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              lists.map(
+                listnum => (<Listadd listnum={listnum} props={props.setData} key={listnum.like}/>)
+              )
+            }
+          </tbody>
+        </table>
+        <button className="btn btn-success"onClick={addlist} style={{backgroundColor:"#000000"}}>reload</button>
+    </div>
   )
 }
 export default Body;

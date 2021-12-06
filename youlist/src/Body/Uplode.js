@@ -27,11 +27,11 @@ function Uplode(props) {
     }
   };
   return(
-    <body style={{padding:"10px",background:'#000000',width:'60%',height:'550px',position:'absolute',top:'220px',left:'30%',color:"#FFFFFF"}} className="center-block">
+    <div style={{padding:"10px",background:'#000000',width:'70%',height:'550px',position:'absolute',top:'220px',left:'20%',color:"#FFFFFF"}} className="center-block">
       <h3>제목</h3><br/>
       <input 
           type="text"
-          style={{width:"90%",}} 
+          style={{width:"70%",}} 
           name="title"
           onChange={onChange} 
           value={title} 
@@ -40,7 +40,7 @@ function Uplode(props) {
       <h3>맨 뒤 / 다음 링크</h3><br/>
       <input 
         type="text"
-        style={{width:"90%"}} 
+        style={{width:"70%"}} 
         name="like" 
         onChange={onChange} 
         value={like}
@@ -48,21 +48,22 @@ function Uplode(props) {
       <h3>태그</h3><br/>
       <input 
         type="text"
-        style={{width:"90%"}} 
+        style={{width:"70%"}} 
         name="tag" 
         value={tag} 
         onChange={onChange}
       /><br/>
-      <button 
-        className="btn btn-warning" 
-        style={{width:"100px",height:"50px",background:'#000000'}}
-        onClick={onReset}
-        >
-          <Link to="/"style={{textDecoration:"none",color:"#FFFFFF"}}onClick={() =>props.setDatas([{title},{like},{tag}])}>
-            올리기
-          </Link>
-      </button>
-    </body>
+        <button 
+          className="btn btn-warning" 
+          style={{width:"100px",height:"50px",background:'#000000',position:'absolute',top:"80%",left:"30%"}}
+
+          onClick={onReset}
+          >
+            <Link to="/"style={{textDecoration:"none",color:"#FFFFFF"}}onClick={() =>props.setDatas([{title},{like},{tag}])}>
+              올리기
+            </Link>
+        </button>
+    </div>
   )
 }
 
