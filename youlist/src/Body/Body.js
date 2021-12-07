@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 function Listadd({listnum},props){
   function aaaa(){
-    console.log(props)
+    console.log(props.setData)
     console.log(listnum)
   }
   return(
@@ -60,10 +60,14 @@ function Body (props){
     console.log(props.datads)
     if(props.datads && props.datads.length > 0) {
 			console.log(props.datads[0]);
-        
-      
-      console.log(lists)
-  setLists([...lists,props.datads[0],props.datads[1],props.datads[2]])
+      const list = {
+        title:Object.values(props.datads[0]),
+        like:Object.values(props.datads[1]),
+        tag:Object.values(props.datads[2])
+      }
+              
+      console.log(list)
+  setLists([...lists,list])
       console.log(lists)
     };
   }
