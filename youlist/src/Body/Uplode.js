@@ -27,7 +27,7 @@ function Uplode(props) {
     }
   };
   return(
-    <div style={{padding:"10px",background:'#000000',width:'70%',height:'550px',position:'absolute',top:'220px',left:'20%',color:"#FFFFFF"}} className="center-block">
+    <div style={{paddingLeft:"7%",background:'#000000',width:'70%',height:'550px',position:'absolute',top:'0px',left:'20%',color:"#FFFFFF"}} className="center-block">
       <h3>제목</h3><br/>
       <input 
           type="text"
@@ -55,7 +55,7 @@ function Uplode(props) {
       /><br/>
         <button 
           className="btn btn-warning" 
-          style={{width:"100px",height:"50px",background:'#000000',position:'absolute',top:"80%",left:"30%"}}
+          style={{width:"100px",height:"50px",background:'#000000',position:'absolute',top:"80%",left:"35%"}}
 
           onClick={onReset}
           >
