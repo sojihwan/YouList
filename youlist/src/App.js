@@ -16,21 +16,17 @@ function App() {
 
     const [data, setData] = useState('');
   const [datas, setDatas] = useState([]);
-  const a = () => {
-    console.log(data)
-    console.log(data)
-    console.log(setData)
-  }
   return (
     <div style={{backgroundColor:"black"}}>
       <Header></Header>
+      <div style={{width:'70%',position:'absolute',top:'220',left:'15%'}}>
       <RightNav></RightNav>
       <Route path ="/1qsdexbsgsdbs" component={()=><Listadd setData={setData}/>}/>
       <Route path ="/View"  component={()=> <View name={data}/>}/>
       <Route path ="/Uplode" component = {()=> <Uplode setDatas={setDatas}/>} />
       <LeftNav></LeftNav>
       <Route path ="/" component = {()=> <Body datads={datas}/>} exact/>
-      <button onClick={a}>aaa</button>
+      </div>
     </div>
   );
 }
