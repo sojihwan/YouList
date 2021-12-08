@@ -9,7 +9,7 @@ function RightNav (){
     setText(e.target.value);
   };
   return(
-    <nav style={{padding:"5px",background:'#DCDCDC',width:'20%',height:'550px',borderRadius:"20PX"}} className="center-block">
+    <nav style={{background:'#DCDCDC',width:'15%',height:'550px',borderRadius:"20PX"}} className="center-block">
       <h1 style={{textAlign:'center'}}>
         <strong>태그</strong>
         <br/>
@@ -29,11 +29,11 @@ function RightNav (){
         <br/>
         <Link to="/uplode" style={{textDecoration:"none",color:"#000000"}}>
         <select className="btn btn-secondary dropdown-toggle"style={{textAlign:"center"}}>
-          <option>웃긴-업로드</option>
-          <option>음악-업로드</option>
-          <option>애니메이션-업로드</option>
-          <option>감상-업로드</option>
-          <option>게임-업로드</option>
+          <option>업로드</option>
+          <option>음악</option>
+          <option>애니메이션</option>
+          <option>감상</option>
+          <option>게임</option>
         </select>
         </Link>
         <br/>
