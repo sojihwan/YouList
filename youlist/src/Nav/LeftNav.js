@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function LeftNav (){
   return(
-    <nav style={{padding:"5px",borderRadius:"20PX",background:'#DCDCDC',width:'20%',height:'550px',position:'absolute',top:'220px',left:'80%'}} className="center-block">
+    <nav style={{borderRadius:"20PX",background:'#DCDCDC',width:'15%',height:'550px',position:'absolute',left:'85%',top:'0px'}} className="center-block">
       <h2 style={{textAlign:'center'}}>
         <strong>이동</strong>
         <p>
