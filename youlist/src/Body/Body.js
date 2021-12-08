@@ -1,19 +1,9 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
+import { Link } from 'react-router-dom';
 import Listadd from './Listadd';
 
 function Body (props){
-  // const [delest,setDelest]=useState({
-  //   like: ''
-  // })
-  // function dellist(){
-  //   for(let i=0; i<=lists.length; i++){
-  //     if(delest===lists.like){
-  //       lists.pop(i)
-  //     }
-  //   }
-  // }
-
   const [lists,setLists] =useState([
     {
       title:'React 기초 0강 : 리액트왜 쓰는지 알려줌 (+ 수강시 필요 사전지식)',
@@ -65,6 +55,9 @@ function Body (props){
   const onRemomve = like=>{
     setLists(lists.filter(lists => lists.like !== like))
   }
+  const onView = link => {
+    props.setData=link
+  }
   return(
     <div style={{background:'#000000',width:'70%',height:'550px',position:'absolute',left:"15%",top:"0px"}} className="center-block">
         <table className="table table-striped" name="list1" style={{color:"#FFFFFF"}}>
@@ -78,9 +71,14 @@ function Body (props){
           <tbody>
             {
               lists.map(
-                listnum => (<Listadd listnum={listnum} key={listnum.like} onRemomve={onRemomve}/>)
+                listnum => (<Listadd listnum={listnum} key={listnum.like} onView={onView} onRemomve={onRemomve}/>)
               )
             }
+            <tr>
+              <td onClick={() => props.setData(`x13D1gG3K-Q`)}><Link to="/View" style={{textDecoration:"none",color:"#FFFFFF"}}>🔥Best NCS Gaming Music 2020 Mix ♫ Top 50 NCS Songs, Trap x Bass x Dubstep x House ♫ Best Of EDM 2020</Link></td>
+              <td><button className='btn btn-default' style={{color:'#FFFFFF',width:'60px'}} onClick={()=>onRemomve(lists.like)}><Link to="/" style={{textDecoration:"none",color:"#FFFFFF"}}>삭제</Link></button></td>
+              <td style={{color:'#FFFFFF'}}>#음악 #신나는 #힐링</td>
+           </tr>
           </tbody>
         </table>
         <button className="btn btn-success"onClick={addlist} style={{backgroundColor:"#000000"}}>reload</button>
