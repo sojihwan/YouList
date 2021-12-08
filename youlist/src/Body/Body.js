@@ -3,6 +3,17 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Listadd from './Listadd';
 
 function Body (props){
+  // const [delest,setDelest]=useState({
+  //   like: ''
+  // })
+  // function dellist(){
+  //   for(let i=0; i<=lists.length; i++){
+  //     if(delest===lists.like){
+  //       lists.pop(i)
+  //     }
+  //   }
+  // }
+
   const [lists,setLists] =useState([
     {
       title:'React 기초 0강 : 리액트왜 쓰는지 알려줌 (+ 수강시 필요 사전지식)',
@@ -51,8 +62,11 @@ function Body (props){
       console.log(lists)
     };
   }
+  const onRemomve = like=>{
+    setLists(lists.filter(lists => lists.like !== like))
+  }
   return(
-    <div style={{paddingLeft:"10px",background:'#000000',width:'60%',height:'550px',position:'absolute',top:'220px',left:'20%'}} className="center-block">
+    <div style={{background:'#000000',width:'70%',height:'550px',position:'absolute',left:"15%",top:"0px"}} className="center-block">
         <table className="table table-striped" name="list1" style={{color:"#FFFFFF"}}>
           <thead>
             <tr>
@@ -64,7 +78,7 @@ function Body (props){
           <tbody>
             {
               lists.map(
-                listnum => (<Listadd listnum={listnum} key={listnum.like}/>)
+                listnum => (<Listadd listnum={listnum} key={listnum.like} onRemomve={onRemomve}/>)
               )
             }
           </tbody>
