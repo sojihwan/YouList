@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
+import '../CSS/Div.css'
 
 function Header (){
   const [Log, setLog] = useState('');
@@ -13,7 +14,7 @@ function Header (){
   }
   
   return(
-    <header style={{background:'#000000',height:'220px',paddingTop:"5px"}} className="center-block">
+    <header className='Headercss'>
       <h1 style={{textAlign:'center',color:"#ffffff"}}>
         <strong style={{color:"red"}}>Youlist</strong>
         <br/>나를 위한 유튜브 모음 사이트
