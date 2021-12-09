@@ -1,6 +1,8 @@
 import React,{useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Link } from 'react-router-dom';
+import '../CSS/Div.css'
+import '../CSS/Link.css'
 
 function RightNav (){
   const [text, setText] = useState('');
@@ -9,7 +11,7 @@ function RightNav (){
     setText(e.target.value);
   };
   return(
-    <nav style={{background:'#DCDCDC',width:'15%',height:'550px',borderRadius:"20PX"}} className="center-block">
+    <nav className="RightNav">
       <h1 style={{textAlign:'center'}}>
         <strong>태그</strong>
         <br/>
@@ -19,7 +21,7 @@ function RightNav (){
           <option value="추천"  >추천</option>
           <option value="웃긴"  >웃긴</option>
           <option value="음악"  >음악</option>
-          <option value="애니메이션"  >애니메이션</option>
+          <option value="애니"  >애니</option>
           <option value="감상"  >감상</option>
           <option value="게임"  >게임</option>
           <option value="공부"  >공부</option>
@@ -27,7 +29,7 @@ function RightNav (){
         </select><br/>
         <strong>업로드</strong>
         <br/>
-        <Link to="/uplode" style={{textDecoration:"none",color:"#000000"}}>
+        <Link to="/uplode"className="Link1">
         <select className="btn btn-secondary dropdown-toggle"style={{textAlign:"center"}}>
           <option>업로드</option>
           <option>음악</option>
