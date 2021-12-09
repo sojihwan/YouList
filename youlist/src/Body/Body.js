@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Link } from 'react-router-dom';
 import Listadd from './Listadd';
+import '../CSS/Div.css'
+import '../CSS/Link.css'
 
 function Body (props){
   const [lists,setLists] =useState([
@@ -59,8 +61,8 @@ function Body (props){
     props.setData=link
   }
   return(
-    <div style={{background:'#000000',width:'70%',height:'550px',position:'absolute',left:"15%",top:"0px"}} className="center-block">
-        <table className="table table-striped" name="list1" style={{color:"#FFFFFF"}}>
+    <div className="Bodydiv">
+        <table className="table table-striped" style={{color:"#FFFFFF"}} name="list1" >
           <thead>
             <tr>
               <th>이름</th>
@@ -75,7 +77,7 @@ function Body (props){
               )
             }
             <tr>
-              <td onClick={() => props.setData(`x13D1gG3K-Q`)}><Link to="/View" style={{textDecoration:"none",color:"#FFFFFF"}}>🔥Best NCS Gaming Music 2020 Mix ♫ Top 50 NCS Songs, Trap x Bass x Dubstep x House ♫ Best Of EDM 2020</Link></td>
+              <td onClick={() => props.setData(`x13D1gG3K-Q`)}><Link to="/View" className='Link'>🔥Best NCS Gaming Music 2020 Mix ♫ Top 50 NCS Songs, Trap x Bass x Dubstep x House ♫ Best Of EDM 2020</Link></td>
               <td><button className='btn btn-default' style={{color:'#FFFFFF',width:'60px'}} onClick={()=>onRemomve(lists.like)}><Link to="/" style={{textDecoration:"none",color:"#FFFFFF"}}>삭제</Link></button></td>
               <td style={{color:'#FFFFFF'}}>#음악 #신나는 #힐링</td>
            </tr>
@@ -85,4 +87,4 @@ function Body (props){
     </div>
   )
 }
-export default Body;
+export default React.memo(Body);
