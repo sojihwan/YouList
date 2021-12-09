@@ -3,6 +3,7 @@
 /* eslint-disable no-sequences */
 import React,{useState} from "react";
 import { Link } from "react-router-dom";
+import '../CSS/Div.css'
 
 function Uplode(props) {
   const [Log, setLog] = useState({
@@ -27,7 +28,7 @@ function Uplode(props) {
     }
   };
   return(
-    <div style={{paddingLeft:"7%",background:'#000000',width:'70%',height:'550px',position:'absolute',top:'0px',left:'20%',color:"#FFFFFF"}} className="center-block">
+    <div className="Uplodediv">
       <h3>제목</h3><br/>
       <input 
           type="text"
