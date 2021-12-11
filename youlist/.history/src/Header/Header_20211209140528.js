@@ -16,7 +16,7 @@ function Header (){
   return(
     <header className='Headercss'>
       <h1 style={{textAlign:'center',color:"#ffffff"}}>
-        <strong style={{color:"red"}}>BillyList</strong>
+        <strong style={{color:"red"}}>Youlist</strong>
         <br/>나를 위한 유튜브 모음 사이트
         <br/>
         <input 

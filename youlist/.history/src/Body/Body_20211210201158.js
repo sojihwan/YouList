@@ -8,34 +8,34 @@ import '../CSS/Link.css'
 function Body (props){
   const [lists,setLists] =useState([
     {
-      title:'React 기초 0강 : 리액트왜 쓰는지 알려줌 (+ 수강시 필요 사전지식)',
-      like:'LclObYwGj90',
-      tag:'#공부 #리엑트'
+      title:'[북유럽 신화] 5분마다 뚝배기 깨는 북유럼 신화,한 번에 몰아보기!| 그재무지 시리즈',
+      like:'FjejlcqqQlU',
+      tag:'#신화 #와빌님'
     },
     {
-      title:'🔥Best NCS Gaming Music 2020 Mix ♫ Top 50 NCS Songs, Trap x Bass x Dubstep x House ♫ Best Of EDM 2020',
-      like:'x13D1gG3K-Q',
-      tag:'#음악 #신나는 #힐링'
+      title:'[이집트 신화]5분마다 성스러운 이집트 신화, 한 번에 몰아보기!| 그재무지 시리즈',
+      like:'vocNhmB3mn0',
+      tag:'#신화 #와빌님'
     },
     {
-      title:'I recreated Line Rider in 3D and the result feels cursed',
-      like:'aMaencWqIhY',
-      tag:'#음악 #신나는 #힐링'
+      title:'[포켓몬스터 괴담]#12파면 팔수록 진짜 그럴듯한 포켓몬 괴담들',
+      like:'CLPF195trwM',
+      tag:'#포켓몬 #와빌님 #괴담'
     },
     {
-      title:'I Synchronized my Minecraft World to Music',
-      like:'Y88ezQ8bpfE',
-      tag:'#음악 #신나는 #힐링'
+      title:'2021 와빌 채널 최다 질문! 언제 나오고 어떻게 만났냐면요ㅎㅎ',
+      like:'JxjxAXQXVHM',
+      tag:'#QNA #와빌님 #럭키컵케이크님'
     },
     {
-      title:'언더 플레이어 영화-FULL 【Undertale Comic Dub】',
-      like:'5kq_gkOs3Y4',
-      tag:'#게임 #애니메이션'
+      title:'[NEW 메소포타미아 신화]#1 천지창조&신들의 탄생| 그재무지 시리즈',
+      like:'taXaNvMlb4k',
+      tag:'#와빌님 #신화'
     },
     {
-      title:'Minecraft Dreams',
-      like:'a5jNUlwfGxg',
-      tag:'#음악 #신나는 #힐링'
+      title:'[NEW 메소포타미아 신화]#2 사랑과 전쟁 엔키❤닌후륵상 | 시리즈 (수정)',
+      like:'6TAeopqW7oU',
+      tag:'#와빌님 #신화 #힐링'
     },
     
   ])
@@ -76,11 +76,10 @@ function Body (props){
                 listnum => (<Listadd listnum={listnum} key={listnum.like} onView={onView} onRemomve={onRemomve}/>)
               )
             }
-            
             <tr>
-              <td onClick={() => props.setData(`x13D1gG3K-Q`)}><Link to="/View" className='Link'>🔥Best NCS Gaming Music 2020 Mix ♫ Top 50 NCS Songs, Trap x Bass x Dubstep x House ♫ Best Of EDM 2020</Link></td>
+              <td onClick={() => props.setData(`FjejlcqqQlU`)}><Link to="/View" className='Link'>[북유럽 신화] 5분마다 뚝배기 깨는 북유럼 신화,한 번에 몰아보기!| 그재무지 시리즈</Link></td>
               <td><button className='btn btn-default' style={{color:'#FFFFFF',width:'60px'}} onClick={()=>onRemomve(lists.like)}><Link to="/" style={{textDecoration:"none",color:"#FFFFFF"}}>삭제</Link></button></td>
-              <td style={{color:'#FFFFFF'}}>#음악 #신나는 #힐링</td>
+              <td style={{color:'#FFFFFF'}}>#신화 #와빌님</td>
            </tr>
           </tbody>
         </table>

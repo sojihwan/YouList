@@ -76,7 +76,6 @@ function Body (props){
                 listnum => (<Listadd listnum={listnum} key={listnum.like} onView={onView} onRemomve={onRemomve}/>)
               )
             }
-            
             <tr>
               <td onClick={() => props.setData(`x13D1gG3K-Q`)}><Link to="/View" className='Link'>🔥Best NCS Gaming Music 2020 Mix ♫ Top 50 NCS Songs, Trap x Bass x Dubstep x House ♫ Best Of EDM 2020</Link></td>
               <td><button className='btn btn-default' style={{color:'#FFFFFF',width:'60px'}} onClick={()=>onRemomve(lists.like)}><Link to="/" style={{textDecoration:"none",color:"#FFFFFF"}}>삭제</Link></button></td>
