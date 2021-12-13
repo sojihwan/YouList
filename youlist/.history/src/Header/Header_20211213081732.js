@@ -16,7 +16,7 @@ function Header (){
   return(
     <header className='Headercss'>
       <h1 style={{textAlign:'center',color:"#ffffff"}}>
-        <strong style={{color:"red"}}>YOUList</strong>
+        <strong style={{color:"red"}}>youList</strong>
         <br/>나를 위한 유튜브 모음 사이트
         <br/>
         <input 
@@ -25,7 +25,6 @@ function Header (){
           name="select" 
           onChange={onChange}
           value={Log}>
-            
         </input>
         </h1>
     </header>
