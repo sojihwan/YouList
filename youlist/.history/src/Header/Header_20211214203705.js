@@ -12,8 +12,6 @@ function Header (){
       setLog('');
     }
 
-
-    
   
   return(
     <header className='Headercss'>
