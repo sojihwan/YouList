@@ -21,11 +21,11 @@ function App() {
       <Header></Header>
       <div style={{width:'70%',position:'absolute',top:'220',left:'15%'}}>
       <RightNav></RightNav>
-      <Route path ="/1qsdexbsgsdbs" component={()=><Listadd/>}/>
+      <Route path ="/1qsdexbsgsdbs" component={()=><Listadd setData={setData}/>}/>
       <Route path ="/View"  component={()=> <View name={data}/>}/>
       <Route path ="/Uplode" component = {()=> <Uplode setDatas={setDatas}/>} />
       <LeftNav></LeftNav>
-      <Route path ="/" component = {()=> <Body datads={datas} setData={setData} />} exact/>
+      <Route path ="/" component = {()=> <Body datads={datas}/>} exact/>
       </div>
     </div>
   );

@@ -57,9 +57,6 @@ function Body (props){
   const onRemomve = like=>{
     setLists(lists.filter(lists => lists.like !== like))
   }
-  const onView = link => {
-    props.setData=link
-  }
   return(
     <div className="Bodydiv">
         <table className="table table-striped" style={{color:"#FFFFFF"}} name="list1" >
@@ -73,7 +70,7 @@ function Body (props){
           <tbody>
             {
               lists.map(
-                listnum => (<Listadd listnum={listnum} key={listnum.like} onView={onView} onRemomve={onRemomve}/>)
+                listnum => (<Listadd listnum={listnum} key={listnum.like} onRemomve={onRemomve}/>)
               )
             }
             <tr>
