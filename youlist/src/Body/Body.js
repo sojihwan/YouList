@@ -7,6 +7,7 @@ import '../CSS/Link.css'
 
 function Body (props){
   const [lists,setLists] =useState([
+    window.localStorage.getItem("userName"),
     {
       title:'React 기초 0강 : 리액트왜 쓰는지 알려줌 (+ 수강시 필요 사전지식)',
       like:'LclObYwGj90',
@@ -52,6 +53,7 @@ function Body (props){
       console.log(list)
   setLists([...lists,list])
       console.log(lists)
+      window.localStorage.setItem("userName", JSON.stringify(list));
     };
   }
   const onRemomve = like=>{
