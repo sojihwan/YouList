@@ -47,7 +47,6 @@ function Body (props){
         title:Object.values(props.datads[0]),
         like:Object.values(props.datads[1]),
         tag:Object.values(props.datads[2])
-        
       }
               
       console.log(list)

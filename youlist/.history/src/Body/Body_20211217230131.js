@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
+import { Link } from 'react-router-dom';
 import Listadd from './Listadd';
 import '../CSS/Div.css'
 import '../CSS/Link.css'
@@ -47,7 +48,6 @@ function Body (props){
         title:Object.values(props.datads[0]),
         like:Object.values(props.datads[1]),
         tag:Object.values(props.datads[2])
-        
       }
               
       console.log(list)
@@ -74,6 +74,11 @@ function Body (props){
                 listnum => (<Listadd listnum={listnum} key={listnum.like} onRemomve={onRemomve}/>)
               )
             }
+            <tr>
+              <td onClick={() => props.setData(`x13D1gG3K-Q`)}><Link to="/View" className='Link'>🔥Best NCS Gaming Music 2020 Mix ♫ Top 50 NCS Songs, Trap x Bass x Dubstep x House ♫ Best Of EDM 2020</Link></td>
+              <td><button className='btn btn-default' style={{color:'#FFFFFF',width:'60px'}} onClick={()=>onRemomve(lists.like)}><Link to="/" style={{textDecoration:"none",color:"#FFFFFF"}}>삭제</Link></button></td>
+              <td style={{color:'#FFFFFF'}}>#음악 #신나는 #힐링</td>
+           </tr>
           </tbody>
         </table>
         <button className="btn btn-success"onClick={addlist} style={{backgroundColor:"#000000"}}>reload</button>

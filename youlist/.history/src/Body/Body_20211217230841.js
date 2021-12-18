@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
+import { Link } from 'react-router-dom';
 import Listadd from './Listadd';
 import '../CSS/Div.css'
 import '../CSS/Link.css'
@@ -47,7 +48,6 @@ function Body (props){
         title:Object.values(props.datads[0]),
         like:Object.values(props.datads[1]),
         tag:Object.values(props.datads[2])
-        
       }
               
       console.log(list)
@@ -74,6 +74,9 @@ function Body (props){
                 listnum => (<Listadd listnum={listnum} key={listnum.like} onRemomve={onRemomve}/>)
               )
             }
+            <tr>
+            
+           </tr>
           </tbody>
         </table>
         <button className="btn btn-success"onClick={addlist} style={{backgroundColor:"#000000"}}>reload</button>
