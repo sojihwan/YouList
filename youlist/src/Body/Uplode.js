@@ -24,7 +24,7 @@ function Uplode(props) {
 
   const onReset = () => {
     if(title===""||like===""){
-      alert("링크 또는 제목이 비어있습니다.")
+      alert("링크 또는 제목이 비어있습니다.");
     }
   };
   return(
@@ -60,7 +60,7 @@ function Uplode(props) {
 
           onClick={onReset}
           >
-            <Link to="/"style={{textDecoration:"none",color:"#FFFFFF"}}onClick={() =>props.setDatas([{title},{like},{tag}])}>
+            <Link to="/"style={{textDecoration:"none",color:"#FFFFFF"}}onClick={() =>props.setDatas([{title},{like},{tag}]), localStorage.setItem('key', props.setDatas([{title},{like},{tag}]))}>
               올리기
             </Link>
         </button>
