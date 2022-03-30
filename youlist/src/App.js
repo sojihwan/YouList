@@ -12,7 +12,15 @@ import LeftNav from './Nav//LeftNav'
 import Uplode from './Body/Uplode';
 import Listadd from './Body/Listadd';
 
+// axios 추가
+import axios from 'axios';
 function App() {
+
+  useEffect(() => {
+    axios.get('/api/test')
+      .then(res => console.log(res))
+      .catch()
+  })
 
     const [data, setData] = useState('');
   const [datas, setDatas] = useState([]);
