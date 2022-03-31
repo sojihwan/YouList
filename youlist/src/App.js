@@ -11,19 +11,14 @@ import View from './Body/View';
 import LeftNav from './Nav//LeftNav'
 import Uplode from './Body/Uplode';
 import Listadd from './Body/Listadd';
-
 // axios 추가
 import axios from 'axios';
+ 
 function App() {
-
-  useEffect(() => {
-    axios.get('/api/test')
-      .then(res => console.log(res))
-      .catch()
-  })
 
     const [data, setData] = useState('');
   const [datas, setDatas] = useState([]);
+  // 서버에서 받은 데이터를 console로 찍어서 확인한다.
   return (
     <div style={{backgroundColor:"black"}}>
       <Header></Header>
