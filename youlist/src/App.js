@@ -30,9 +30,10 @@ function App() {
       <LeftNav></LeftNav>
       <Route path ="/" component = {()=> <Body datads={datas}/>} exact/>
       </div>
-      
+
     </div>
   );
 }
 
 export default App;
+
