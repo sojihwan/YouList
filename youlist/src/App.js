@@ -16,8 +16,6 @@ import axios from 'axios';
  
 function App() {
 
-    const [data, setData] = useState('');
-  const [datas, setDatas] = useState([]);
   // 서버에서 받은 데이터를 console로 찍어서 확인한다.
   return (
     <div style={{backgroundColor:"black"}}>
