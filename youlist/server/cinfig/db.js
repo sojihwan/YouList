@@ -7,4 +7,4 @@ const db = mysql.createPool({
     database : 'board_sample'
 });
  
-module.exports = db;
+module.exports = db
