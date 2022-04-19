@@ -60,7 +60,7 @@ function Uplode(props) {
 
           onClick={onReset}
           >
-            <Link to="/"style={{textDecoration:"none",color:"#FFFFFF"}}onClick={() =>props.setDatas([{title},{like},{tag}]), localStorage.setItem('key', props.setDatas([{title},{like},{tag}]))}>
+            <Link to="/"style={{textDecoration:"none",color:"#FFFFFF"}}onClick={() =>window.localStorage.setItem(title,like,tag)}>
               올리기
             </Link>
         </button>
