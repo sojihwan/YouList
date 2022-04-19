@@ -9,33 +9,27 @@ function Body (props){
     
     {
       title:'React 기초 0강 : 리액트왜 쓰는지 알려줌 (+ 수강시 필요 사전지식)',
-      like:'LclObYwGj90',
-      tag:'#공부 #리엑트'
+      like:'LclObYwGj90'
     },
     {
       title:'🔥Best NCS Gaming Music 2020 Mix ♫ Top 50 NCS Songs, Trap x Bass x Dubstep x House ♫ Best Of EDM 2020',
-      like:'x13D1gG3K-Q',
-      tag:'#음악 #신나는 #힐링'
+      like:'x13D1gG3K-Q'
     },
     {
       title:'I recreated Line Rider in 3D and the result feels cursed',
-      like:'aMaencWqIhY',
-      tag:'#음악 #신나는 #힐링'
+      like:'aMaencWqIhY'
     },
     {
       title:'I Synchronized my Minecraft World to Music',
-      like:'Y88ezQ8bpfE',
-      tag:'#음악 #신나는 #힐링'
+      like:'Y88ezQ8bpfE'
     },
     {
       title:'언더 플레이어 영화-FULL 【Undertale Comic Dub】',
-      like:'5kq_gkOs3Y4',
-      tag:'#게임 #애니메이션'
+      like:'5kq_gkOs3Y4'
     },
     {
       title:'Minecraft Dreams',
-      like:'a5jNUlwfGxg',
-      tag:'#음악 #신나는 #힐링'
+      like:'a5jNUlwfGxg'
     },
     
   ])
@@ -67,7 +61,6 @@ function Body (props){
             <tr>
               <th>이름</th>
               <th>삭제</th>
-              <th>태그</th>
             </tr>
           </thead>
           <tbody>
