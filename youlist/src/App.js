@@ -14,6 +14,8 @@ import Listadd from './Body/Listadd';
 
 function App() {
 
+    const [data, setData] = useState('');
+  const [datas, setDatas] = useState([]);
   return (
     <div style={{backgroundColor:"black"}}>
       <Header></Header>
@@ -25,10 +27,8 @@ function App() {
       <LeftNav></LeftNav>
       <Route path ="/" component = {()=> <Body datads={datas}/>} exact/>
       </div>
-
     </div>
   );
 }
 
 export default App;
-

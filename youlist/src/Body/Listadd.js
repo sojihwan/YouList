@@ -13,5 +13,4 @@ function Listadd({listnum,onRemomve},props){
     </tr>
   );
 }
-
 export default React.memo(Listadd)
