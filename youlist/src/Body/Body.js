@@ -4,52 +4,19 @@ import Listadd from './Listadd';
 import '../CSS/Div.css'
 import '../CSS/Link.css'
 
-function Body (props){
+function Body (){
   const [lists,setLists] =useState([
     
     {
       title:'React 기초 0강 : 리액트왜 쓰는지 알려줌 (+ 수강시 필요 사전지식)',
       like:'LclObYwGj90'
-    },
-    {
-      title:'🔥Best NCS Gaming Music 2020 Mix ♫ Top 50 NCS Songs, Trap x Bass x Dubstep x House ♫ Best Of EDM 2020',
-      like:'x13D1gG3K-Q'
-    },
-    {
-      title:'I recreated Line Rider in 3D and the result feels cursed',
-      like:'aMaencWqIhY'
-    },
-    {
-      title:'I Synchronized my Minecraft World to Music',
-      like:'Y88ezQ8bpfE'
-    },
-    {
-      title:'언더 플레이어 영화-FULL 【Undertale Comic Dub】',
-      like:'5kq_gkOs3Y4'
-    },
-    {
-      title:'Minecraft Dreams',
-      like:'a5jNUlwfGxg'
-    },
-    
+    }
   ])
   const addlist = () =>{
-    console.log(props.datads)
-    if(props.datads && props.datads.length > 0) {
-			console.log(props.datads[0]);
-      const list = {
-        title:Object.values(props.datads[0]),
-        like:Object.values(props.datads[1]),
-        tag:Object.values(props.datads[2])
-
-
-        
-      }
-              
-      console.log(list)
-  setLists([...lists,list])
+      const list = localStorage.getItem("1");
+      console.log(list);
+  setLists([...lists,list]);
       console.log(lists)
-    };
   }
   const onRemomve = like=>{
     setLists(lists.filter(lists => lists.like !== like))

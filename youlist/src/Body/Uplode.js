@@ -11,7 +11,7 @@ function Uplode(props) {
     tag:"",
     like:""
   });
-  const {title,like,tag} = Log;
+  const {title,like} = Log;
 
   const onChange = (e) => {
     const { name, value } = e.target;
@@ -46,21 +46,13 @@ function Uplode(props) {
         onChange={onChange} 
         value={like}
       /><br/>
-      <h3>태그</h3><br/>
-      <input 
-        type="text"
-        style={{width:"70%"}} 
-        name="tag" 
-        value={tag} 
-        onChange={onChange}
-      /><br/>
         <button 
           className="btn btn-warning" 
           style={{width:"100px",height:"50px",background:'#000000',position:'absolute',top:"80%",left:"35%"}}
 
           onClick={onReset}
           >
-            <Link to="/"style={{textDecoration:"none",color:"#FFFFFF"}}onClick={() =>window.localStorage.setItem(title,like,tag)}>
+            <Link to="/"style={{textDecoration:"none",color:"#FFFFFF"}}onClick={() =>window.localStorage.setItem(localStorage.length,JSON.stringify({title,like}))}>
               올리기
             </Link>
         </button>
