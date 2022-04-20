@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import '../CSS/Link.css'
 
 function Listadd({listnum,onRemomve},props){
+  console.log(listnum);
   return(
     <tr>
       <td onClick={() =>props.setData(listnum.like)}><Link to="/View" className="Link">{listnum.title}</Link></td>

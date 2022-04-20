@@ -6,18 +6,16 @@ import '../CSS/Link.css'
 
 function Body (){
   const [lists,setLists] =useState([
-
   ])
   const addlist = () =>{
-    for(let i = 0; i < localStorage.length+1; i++){
-      const list = JSON.parse(localStorage.getItem(`${localStorage.length-i}`));
-      setLists([...lists,list]);
-      console.log(list);
+    for (var i = 0; i < localStorage.length; i++){
+      setLists([...lists,JSON.parse(localStorage.getItem(`${i}`))]);
     }
-    console.log(lists);
   }
+  
     const onRemomve = like=>{
-    setLists(lists.filter(lists => lists.like !== like))
+    setLists(lists.filter(lists => lists.like !== like));
+    console.log(lists);
   }
   return(
     <div className="Bodydiv">
