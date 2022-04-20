@@ -8,7 +8,6 @@ import '../CSS/Div.css'
 function Uplode(props) {
   const [Log, setLog] = useState({
     title: "",
-    tag:"",
     like:""
   });
   const {title,like} = Log;

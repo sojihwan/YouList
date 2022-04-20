@@ -6,19 +6,17 @@ import '../CSS/Link.css'
 
 function Body (){
   const [lists,setLists] =useState([
-    
-    {
-      title:'React 기초 0강 : 리액트왜 쓰는지 알려줌 (+ 수강시 필요 사전지식)',
-      like:'LclObYwGj90'
-    }
+
   ])
   const addlist = () =>{
-      const list = localStorage.getItem("1");
+    for(let i = 0; i < localStorage.length+1; i++){
+      const list = JSON.parse(localStorage.getItem(`${localStorage.length-i}`));
+      setLists([...lists,list]);
       console.log(list);
-  setLists([...lists,list]);
-      console.log(lists)
+    }
+    console.log(lists);
   }
-  const onRemomve = like=>{
+    const onRemomve = like=>{
     setLists(lists.filter(lists => lists.like !== like))
   }
   return(
