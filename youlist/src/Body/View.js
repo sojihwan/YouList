@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Listadd from './Listadd';
 
 function View (){
-  const like =`https://www.youtube.com/embed/${Listadd.listnum.like}`
+  const like =`https://www.youtube.com/embed/${Listadd.like}`
   return(
     <div className='DIVVIEW'>
 
