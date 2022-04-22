@@ -26,6 +26,7 @@ function Uplode(props) {
       alert("링크 또는 제목이 비어있습니다.");
     }
   };
+  
   return(
     <div className="Uplodediv">
       <h3>제목</h3><br/>
