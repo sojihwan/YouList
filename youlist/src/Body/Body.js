@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import Listadd from './Listadd';
 import '../CSS/Div.css'
@@ -11,16 +11,9 @@ function Body() {
     for (var i = 0; i < localStorage.length; i++) {
       setLists([...lists, JSON.parse(localStorage.getItem(`${i}`))]);
     }
+    console.log(lists)
   }
-  useEffect(() => {
-    for (var i = 0; i < localStorage.length; i++) {
-      const data = JSON.parse(localStorage.getItem(`${i}`))
-      if (data) {
-        setLists(data);
-      }
-    }
-  }, []);
-
+ 
   const onRemomve = like => {
     setLists(lists.filter(lists => lists.like !== like));
     console.log(lists);
