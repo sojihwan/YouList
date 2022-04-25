@@ -15,6 +15,7 @@ function Uplode(props) {
   const onChange = (e) => {
     const { name, value } = e.target;
     setLog({
+      
       ...Log,
       [name]: value,
     });
