@@ -17,7 +17,7 @@ function Uplode(props) {
     setLog({
 
 
-      
+
       ...Log,
       [name]: value,
     });
@@ -71,4 +71,4 @@ function Uplode(props) {
 
 
 
-export default Uplode 
+export default Uplode ;
