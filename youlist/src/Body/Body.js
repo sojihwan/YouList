@@ -11,9 +11,8 @@ function Body() {
     for (var i = 0; i < localStorage.length; i++) {
       setLists([...lists, JSON.parse(localStorage.getItem(`${i}`))]);
     }
-    console.log(lists)
+    console.log(lists)  
   }
- 
   const onRemomve = like => {
     setLists(lists.filter(lists => lists.like !== like));
     console.log(lists);
