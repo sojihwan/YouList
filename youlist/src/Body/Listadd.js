@@ -7,7 +7,7 @@ import '../CSS/Link.css'
 function Listadd({listnum,onRemomve},props){
   return(
     <tr>
-      <td onClick={() =>props.setData()}><Link to="/View" className="Link">{listnum.title}</Link></td>
+      <td onClick={() => onadd(listnum.like)}><Link to="/View" className="Link">{listnum.title} </Link></td>
       <td><button className='btn btn-default' style={{color:'#FFFFFF',width:'60px'}} onClick={()=>onRemomve(listnum.like)}><Link to="/" style={{textDecoration:"none",color:"#FFFFFF"}}>삭제</Link></button></td>
     </tr>
   );
