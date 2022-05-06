@@ -19,7 +19,7 @@ function Body() {
     console.log(lists);
   }
   const onadd = like => {
-    //이동하는 코드 props사용
+    //이동하는 코드 props사용 useState로 값이동
   }
   return (
     <div className="Bodydiv">
