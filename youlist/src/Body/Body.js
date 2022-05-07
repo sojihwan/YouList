@@ -5,7 +5,7 @@ import '../CSS/Div.css'
 import '../CSS/Link.css'
 //앞으로 해야할 것 setLists([...lists, JSON.parse(localStorage.getItem(`${i}`))]);이게 왜 함수가 끝나야지 되는지 확인
 //JSON.parse(localStorage.getItem(키))에 키를 리스트에서 view로 이동  
-function Body() {
+function Body(props) {
   const [lists, setLists] = useState([
   ])
   const addlist = () => {

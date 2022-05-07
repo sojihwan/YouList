@@ -1,10 +1,9 @@
 import '../CSS/Div.css'
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import Listadd from './Listadd';
 
-function View (){
-  const like =`https://www.youtube.com/embed/${Listadd.like}`
+function View (props){
+  const like =`https://www.youtube.com/embed/${props.like}`
   return(
     <div className='DIVVIEW'>
 

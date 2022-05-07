@@ -14,8 +14,7 @@ import Listadd from './Body/Listadd';
 
 function App() {
 
-    const [data, setData] = useState('');
-  const [datas, setDatas] = useState([]);
+    const [data, setData] = useState([]);
   return (
     <div style={{backgroundColor:"black"}}>
       <Header></Header>
@@ -23,9 +22,9 @@ function App() {
       <RightNav></RightNav>
       <Route path ="/1qsdexbsgsdbs" component={()=><Listadd setData={setData}/>}/>
       <Route path ="/View"  component={() => <View like = {data}/>}/>
-      <Route path ="/Uplode" component = {()=> <Uplode setDatas={setDatas}/>} />
+      <Route path ="/Uplode" component = {()=> <Uplode/>} />
       <LeftNav></LeftNav>
-      <Route path ="/" component = {()=> <Body datads={datas}/>} exact/>
+      <Route path ="/" component = {()=> <Body/>} exact/>
       </div>
     </div>
   );
