@@ -18,9 +18,6 @@ function Body(props) {
     setLists(lists.filter(lists => lists.like !== like));
     console.log(lists);
   }
-  const onadd = like => {
-    //이동하는 코드 props사용 useState로 값이동
-  }
   return (
     <div className="Bodydiv">
       <table className="table table-striped" style={{ color: "#FFFFFF" }} name="list1" >
@@ -33,7 +30,7 @@ function Body(props) {
         <tbody>
           {
             lists.map(
-              listnum => (<Listadd listnum={listnum} key={listnum.like} onadd={onadd} onRemomve={onRemomve} />)
+              listnum => (<Listadd listnum={listnum} key={listnum.like} onRemomve={onRemomve} />)
             )
           }
         </tbody>
