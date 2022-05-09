@@ -16,6 +16,7 @@ function Body(props) {
   }
   const onRemomve = like => {
     setLists(lists.filter(lists => lists.like !== like));
+    
     console.log(lists);
   }
   return (
