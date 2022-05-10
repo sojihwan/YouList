@@ -19,7 +19,7 @@ function Header (){
           <br/>나를 위한 유튜브 모음 사이트
           <br/>
           <input 
-            style={{width:"70%",textAlign:"center",borderRadius:"20PX"}}
+            style={{width:"74.5%",textAlign:"center",borderRadius:"20PX"}}
             onKeyPress={handleKeyPress}
             name="select" 
             onChange={onChange}

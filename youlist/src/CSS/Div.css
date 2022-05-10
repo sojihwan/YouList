@@ -36,7 +36,7 @@
   width:15%;
   height:550px;
   position:absolute;
-  left:85%;
+  left:88%;
   top:0px;
 }
 .LeftH1{
@@ -45,6 +45,8 @@
 .RightNav{
   background:#DCDCDC;
   width:15%;
+  position:absolute;
   height:550px;
+  left: -3%;
   border-radius:20PX;
 }

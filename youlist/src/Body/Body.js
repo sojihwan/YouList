@@ -36,7 +36,7 @@ function Body(props) {
           }
         </tbody>
       </table>
-      <button className="btn btn-success" onClick={addlist} style={{ backgroundColor: "#000000" }}>reload</button>
+      <button className="btn btn-success" onClick={addlist} style={{ backgroundColor: "#000000", position:"fixed",top:"80%"}}>reload</button>
     </div>
   )
 }
