@@ -1,13 +1,13 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable no-sequences */
-import React from 'react';
+import React,{ useState } from 'react';
 import {Link} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.css';
 import '../CSS/Link.css'
 
 function Listadd({listnum,onRemomve},props){
   function sendData(){
-    props.setValue(listnum.like);
+    props.setValue(`${listnum.like}`);
   }
   return(
     <tr>

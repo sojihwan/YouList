@@ -19,8 +19,8 @@ function App() {
       <Header></Header>
       <div style={{width:'70%',position:'absolute',top:'220',left:'15%'}}>
       <RightNav></RightNav>
-      <Route path ="/1qsdexbsgsdbs" component={()=><Listadd setValue={setValue}/>}/>
-      <Route path ="/View"  component={() => <View value={value}/>}/>
+      <Route path ="/1qsdexbsgsdbs" component={()=><Listadd value= {Text} getlike={getlike}/>}/>
+      <Route path ="/View"  component={() => <View value={like}/>}/>
       <Route path ="/Uplode" component = {()=> <Uplode/>} />
       <LeftNav></LeftNav>
       <Route path ="/" component = {()=> <Body/>} exact/>

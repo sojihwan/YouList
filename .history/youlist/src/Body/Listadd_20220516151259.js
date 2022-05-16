@@ -7,11 +7,11 @@ import '../CSS/Link.css'
 
 function Listadd({listnum,onRemomve},props){
   function sendData(){
-    props.setValue(listnum.like);
+    props.setValue("자식 데이터");
   }
   return(
     <tr>
-      <td onClick={sendData}><Link to="/View" className="Link">{listnum.title}</Link></td>
+      <td><Link to="/View" className="Link"><a onClick={sendData}>{listnum.title}</a></Link></td>
       <td><button className='btn btn-default' style={{color:'#FFFFFF',width:'60px'}} onClick={()=>onRemomve(listnum.like)}><Link to="/" style={{textDecoration:"none",color:"#FFFFFF"}}>삭제</Link></button></td>
     </tr>
   );

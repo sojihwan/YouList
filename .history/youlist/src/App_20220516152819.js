@@ -13,14 +13,13 @@ import Uplode from './Body/Uplode';
 import Listadd from './Body/Listadd';
 
 function App() {
-  const [value, setValue] = useState("");
   return (
     <div style={{backgroundColor:"black"}}>
       <Header></Header>
       <div style={{width:'70%',position:'absolute',top:'220',left:'15%'}}>
       <RightNav></RightNav>
-      <Route path ="/1qsdexbsgsdbs" component={()=><Listadd setValue={setValue}/>}/>
-      <Route path ="/View"  component={() => <View value={value}/>}/>
+      <Route path ="/1qsdexbsgsdbs" component={()=><Listadd />}/>
+      <Route path ="/View"  component={() => <View/>}/>
       <Route path ="/Uplode" component = {()=> <Uplode/>} />
       <LeftNav></LeftNav>
       <Route path ="/" component = {()=> <Body/>} exact/>

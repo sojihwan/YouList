@@ -7,7 +7,7 @@ import '../CSS/Link.css'
 
 function Listadd({listnum,onRemomve},props){
   function sendData(){
-    props.setValue(listnum.like);
+    props.setValue(`${listnum.like}`);
   }
   return(
     <tr>
