@@ -3,7 +3,8 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 
 function View (props){
-  const like =`https://www.youtube.com/embed/${props.like}`
+  console.log(props)
+  const like =`https://www.youtube.com/embed/${props.value}`
   return(
     <div className='DIVVIEW'>
 
