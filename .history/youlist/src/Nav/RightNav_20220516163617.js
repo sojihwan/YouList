@@ -1,14 +1,22 @@
-import React from 'react';
+import React,{useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Link } from 'react-router-dom';
 import '../CSS/Div.css'
 import '../CSS/Link.css'
 
 function RightNav (){
+  const [text, setText] = useState('');
 
+  const onChange = (e) => {
+    setText(e.target.value);
+  };
   return(
     <nav className="RightNav">
       <h1 style={{textAlign:'center'}}>
+        <strong>태그</strong>
+        <br/>
+          {text}
+        <br/>
         <br/>
         <strong>업로드</strong>
         <br/>

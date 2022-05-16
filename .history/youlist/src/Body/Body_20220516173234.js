@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 function Body(props) {
   const [lists, setLists] = useState([ 
     // for(var i = 0; i <= localStorage.length-1; i++) {
-        JSON.parse(localStorage.getItem(0))
+        JSON.parse(localStorage.getItem(1))
     // }
     ])
   function likeing(like){
@@ -35,8 +35,9 @@ function Body(props) {
             lists.map((item) => {
               return(
                 <tr>
-                  <td onClick={likeing(item.like)}><Link to="/View" className="Link">{item.title}</Link></td>
+                  <td onClick={likeing(item)}><Link to="/View" className="Link">{item.title}</Link></td>
                   <td><button className='btn btn-default' style={{color:'#FFFFFF',width:'60px'}} onClick={()=>onRemomve(item.like)}>삭제</button></td>
+
                 </tr>
               );
             })}

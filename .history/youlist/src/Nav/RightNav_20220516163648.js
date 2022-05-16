@@ -9,6 +9,7 @@ function RightNav (){
   return(
     <nav className="RightNav">
       <h1 style={{textAlign:'center'}}>
+        <strong>태그</strong>
         <br/>
         <strong>업로드</strong>
         <br/>

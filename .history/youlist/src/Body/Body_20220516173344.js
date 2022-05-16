@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 function Body(props) {
   const [lists, setLists] = useState([ 
     // for(var i = 0; i <= localStorage.length-1; i++) {
-        JSON.parse(localStorage.getItem(0))
+        JSON.parse(localStorage.getItem(1))
     // }
     ])
   function likeing(like){

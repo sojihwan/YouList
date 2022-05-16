@@ -9,7 +9,6 @@ function RightNav (){
   return(
     <nav className="RightNav">
       <h1 style={{textAlign:'center'}}>
-        <br/>
         <strong>업로드</strong>
         <br/>
         <Link to="/uplode"className="Link1">

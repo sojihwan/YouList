@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Link } from 'react-router-dom';
 import '../CSS/Div.css'
@@ -9,6 +9,7 @@ function RightNav (){
   return(
     <nav className="RightNav">
       <h1 style={{textAlign:'center'}}>
+        <strong>태그</strong>
         <br/>
         <strong>업로드</strong>
         <br/>
