@@ -1,0 +1,41 @@
+/* eslint-disable no-sequences */
+
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import React,{useState} from 'react'
+import { Route } from 'react-router';
+import Header from './Header/Header'
+import RightNav from './Nav/RightNav'
+import Body from './Body/Body'
+import View from './Body/View';
+import LeftNav from './Nav//LeftNav'
+import Uplode from './Body/Uplode';
+import Listadd from './Body/Listadd';
+
+function App() {
+
+  const list=(aaa)=>{
+    //아래와 같은 일들을 할 수 있다.
+    listnum.like = aaa         //변수에 값을 넣음
+    setSomething(aaa) //hooks에 값넣음
+   }
+   
+   const App =()=>{
+     <Listadd aaa={listnum.like} />
+   }
+  return (
+    <div style={{backgroundColor:"black"}}>
+      <Header></Header>
+      <div style={{width:'70%',position:'absolute',top:'220',left:'15%'}}>
+      <RightNav></RightNav>
+      <Route path ="/1qsdexbsgsdbs" component={()=><Listadd/>}/>
+      <Route path ="/View"  component={() => <View listnum={App}/>}/>
+      <Route path ="/Uplode" component = {()=> <Uplode/>} />
+      <LeftNav></LeftNav>
+      <Route path ="/" component = {()=> <Body/>} exact/>
+      </div>
+    </div>
+  );
+}
+
+export default App;
