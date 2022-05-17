@@ -4,10 +4,7 @@ import { Link } from 'react-router-dom';
 import '../CSS/Div.css'
 import '../CSS/Link.css'
 
-function LeftNav (props){
-  function next(){
-
-  }
+function LeftNav (){
   return(
     <nav className="LeftNav">
       <h2 className='LeftH1'>

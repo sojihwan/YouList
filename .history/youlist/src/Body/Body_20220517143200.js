@@ -19,6 +19,7 @@ function Body(props) {
     ])
   
   const onRemomve = like => {
+    setLists()
     var i = 0;
     var s
     for(i=0;i<=localStorage.length-1;i++){

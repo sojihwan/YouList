@@ -15,6 +15,10 @@ function RightNav (){
         <Link to="/uplode"className="Link1">
         <select className="btn btn-secondary dropdown-toggle"style={{textAlign:"center"}}>
           <option>업로드</option>
+          <option>음악</option>
+          <option>애니메이션</option>
+          <option>감상</option>
+          <option>게임</option>
         </select>
         </Link>
         <br/>

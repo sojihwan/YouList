@@ -23,6 +23,8 @@ function Body(props) {
     var s
     for(i=0;i<=localStorage.length-1;i++){
       s = JSON.parse(localStorage.getItem(`${i}`));
+      console.log(s.like)
+      console.log(like)
       if(s.like === like){
         break
       }

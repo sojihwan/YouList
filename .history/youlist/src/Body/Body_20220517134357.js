@@ -14,20 +14,12 @@ function Body(props) {
         JSON.parse(localStorage.getItem(3)),
         JSON.parse(localStorage.getItem(4)),
         JSON.parse(localStorage.getItem(5)),
-        JSON.parse(localStorage.getItem(6))
+        JSON.parse(localStorage.getItem(6)),
     //  }
     ])
   
   const onRemomve = like => {
-    var i = 0;
-    var s
-    for(i=0;i<=localStorage.length-1;i++){
-      s = JSON.parse(localStorage.getItem(`${i}`));
-      if(s.like === like){
-        break
-      }
-    }
-    localStorage.removeItem(i);
+    JSON.parse(localStorage.removeItem(`${like}`));
   }
   return (
     <div className="Bodydiv">
@@ -41,6 +33,7 @@ function Body(props) {
         <tbody>
           {
             lists.map((item,index) => {
+              console.log(item)
               return(
                 <tr key={index}>
                   <td> 
@@ -50,7 +43,7 @@ function Body(props) {
                       </b>
                     </Link>
                   </td>
-                  <td><button className='btn btn-default' style={{color:'#FFFFFF',width:'60px'}} onClick={()=>{if(item !== null){onRemomve(item.like)}}}>삭제</button></td>
+                  <td><button className='btn btn-default' style={{color:'#FFFFFF',width:'60px'}} onClick={()=>{if(item !== null){onRemomve()}}}>삭제</button></td>
                 </tr>
               );
             }

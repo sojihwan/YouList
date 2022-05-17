@@ -20,14 +20,10 @@ function Body(props) {
   
   const onRemomve = like => {
     var i = 0;
-    var s
     for(i=0;i<=localStorage.length-1;i++){
-      s = JSON.parse(localStorage.getItem(`${i}`));
-      if(s.like === like){
-        break
-      }
+
     }
-    localStorage.removeItem(i);
+    localStorage.removeItem(0);
   }
   return (
     <div className="Bodydiv">
@@ -50,7 +46,7 @@ function Body(props) {
                       </b>
                     </Link>
                   </td>
-                  <td><button className='btn btn-default' style={{color:'#FFFFFF',width:'60px'}} onClick={()=>{if(item !== null){onRemomve(item.like)}}}>삭제</button></td>
+                  <td><button className='btn btn-default' style={{color:'#FFFFFF',width:'60px'}} onClick={()=>{if(item !== null){onRemomve()}}}>삭제</button></td>
                 </tr>
               );
             }

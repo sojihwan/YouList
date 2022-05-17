@@ -23,6 +23,7 @@ function Body(props) {
     var s
     for(i=0;i<=localStorage.length-1;i++){
       s = JSON.parse(localStorage.getItem(`${i}`));
+      console.log(s.like)
       if(s.like === like){
         break
       }
@@ -50,7 +51,7 @@ function Body(props) {
                       </b>
                     </Link>
                   </td>
-                  <td><button className='btn btn-default' style={{color:'#FFFFFF',width:'60px'}} onClick={()=>{if(item !== null){onRemomve(item.like)}}}>삭제</button></td>
+                  <td><button className='btn btn-default' style={{color:'#FFFFFF',width:'60px'}} onClick={()=>{if(item !== null){onRemomve()}}}>삭제</button></td>
                 </tr>
               );
             }

@@ -14,8 +14,10 @@ function LeftNav (props){
         <strong>이동</strong>
         <p>
         <br/>
+        <Link to="View" className='Link1'>
         <b>다음 영상</b><br/>
         neitem.title<br/>
+        </Link>
         <br/>
         </p>
         <Link to="/"className="Link1">리스트로</Link><br/>
