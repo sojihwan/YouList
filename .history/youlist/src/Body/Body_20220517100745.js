@@ -7,20 +7,20 @@ import { Link } from 'react-router-dom';
 //JSON.parse(localStorage.getItem(키))에 키를 리스트에서 view로 이동  
 function Body(props) {
   const [lists, setLists] = useState([ 
-    //  for(var i = 0; i <= localStorage.length-1; i++) {
+    // for(var i = 0; i <= localStorage.length-1; i++) {
         JSON.parse(localStorage.getItem(0)),
-        JSON.parse(localStorage.getItem(1)),
-        JSON.parse(localStorage.getItem(2)),
-        JSON.parse(localStorage.getItem(3)),
-        JSON.parse(localStorage.getItem(4)),
-        JSON.parse(localStorage.getItem(5)),
-        JSON.parse(localStorage.getItem(6)),
-    //  }
+        JSON.parse(localStorage.getItem(1))
+    // }
     ])
+  function likeing(like){
+    console.log(like);
+    console.log(like);
+    props.setValue(like);
+  }
   
   const onRemomve = like => {
     setLists(lists.filter(lists => lists.like !== like));
-    window.localStorage.removeItem(98);
+    window.localStorage.removeItem(2);
     console.log(lists);
   }
   return (
@@ -34,23 +34,14 @@ function Body(props) {
         </thead>
         <tbody>
           {
-            lists.map((item,index) => {
-              console.log(item)
+            lists.map((item) => {
               return(
-                <tr key={index}>
-                  <td> 
-                    <Link to="/View" className="Link">
-                      <b onClick={() =>{if(item != null){props.setValue(item.like)}}}>
-                       {item===null ? '업로드를 해주세요' : item.title }
-                      </b>
-                    </Link>
-                  </td>
-                  <td><button className='btn btn-default' style={{color:'#FFFFFF',width:'60px'}} onClick={()=>{if(item !== null){onRemomve()}}}>삭제</button></td>
+                <tr>
+                  <td onClick={likeing(item.like)} key={item.like}><Link to="/View" className="Link">{item.title}</Link></td>
+                  <td><button className='btn btn-default' style={{color:'#FFFFFF',width:'60px'}} onClick={()=>onRemomve(item.like)}>삭제</button></td>
                 </tr>
               );
-            }
-            )
-            }
+            })}
         </tbody>
       </table>
     </div>

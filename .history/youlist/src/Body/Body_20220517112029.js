@@ -9,18 +9,16 @@ function Body(props) {
   const [lists, setLists] = useState([ 
     //  for(var i = 0; i <= localStorage.length-1; i++) {
         JSON.parse(localStorage.getItem(0)),
-        JSON.parse(localStorage.getItem(1)),
-        JSON.parse(localStorage.getItem(2)),
-        JSON.parse(localStorage.getItem(3)),
-        JSON.parse(localStorage.getItem(4)),
-        JSON.parse(localStorage.getItem(5)),
-        JSON.parse(localStorage.getItem(6)),
+        JSON.parse(localStorage.getItem(1))
     //  }
     ])
   
   const onRemomve = like => {
     setLists(lists.filter(lists => lists.like !== like));
-    window.localStorage.removeItem(98);
+    for(var i = 0; i <= localStorage.length-1; i++) {
+      console.log(JSON.parse(localStorage.getItem(i)))
+   }
+    window.localStorage.removeItem(2);
     console.log(lists);
   }
   return (
@@ -34,18 +32,12 @@ function Body(props) {
         </thead>
         <tbody>
           {
-            lists.map((item,index) => {
+            lists.map((item) => {
               console.log(item)
               return(
-                <tr key={index}>
-                  <td> 
-                    <Link to="/View" className="Link">
-                      <b onClick={() =>{if(item != null){props.setValue(item.like)}}}>
-                       {item===null ? '업로드를 해주세요' : item.title }
-                      </b>
-                    </Link>
-                  </td>
-                  <td><button className='btn btn-default' style={{color:'#FFFFFF',width:'60px'}} onClick={()=>{if(item !== null){onRemomve()}}}>삭제</button></td>
+                <tr key={item.like}>
+                  <td><Link to="/View" className="Link"><b onClick={() => props.setValue(item.like)}>{item.title}</b></Link></td>
+                  <td><button className='btn btn-default' style={{color:'#FFFFFF',width:'60px'}} onClick={()=>onRemomve(item.like)}>삭제</button></td>
                 </tr>
               );
             }

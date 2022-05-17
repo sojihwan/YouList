@@ -20,7 +20,10 @@ function Body(props) {
   
   const onRemomve = like => {
     setLists(lists.filter(lists => lists.like !== like));
-    window.localStorage.removeItem(98);
+    for(var i = 0; i <= localStorage.length-1; i++) {
+      console.log(JSON.parse(localStorage.getItem(i)))
+   }
+    window.localStorage.removeItem(5);
     console.log(lists);
   }
   return (
@@ -41,11 +44,11 @@ function Body(props) {
                   <td> 
                     <Link to="/View" className="Link">
                       <b onClick={() =>{if(item != null){props.setValue(item.like)}}}>
-                       {item===null ? '업로드를 해주세요' : item.title }
+                       {item===null ? 'null' : item.title }
                       </b>
                     </Link>
                   </td>
-                  <td><button className='btn btn-default' style={{color:'#FFFFFF',width:'60px'}} onClick={()=>{if(item !== null){onRemomve()}}}>삭제</button></td>
+                  <td><button className='btn btn-default' style={{color:'#FFFFFF',width:'60px'}} onClick={()=>{if(item != null){onRemomve(item.like)}}}>삭제</button></td>
                 </tr>
               );
             }

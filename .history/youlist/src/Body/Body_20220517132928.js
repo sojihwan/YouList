@@ -45,7 +45,7 @@ function Body(props) {
                       </b>
                     </Link>
                   </td>
-                  <td><button className='btn btn-default' style={{color:'#FFFFFF',width:'60px'}} onClick={()=>{if(item !== null){onRemomve()}}}>삭제</button></td>
+                  <td><button className='btn btn-default' style={{color:'#FFFFFF',width:'60px'}} onClick={()=>{if(item !== null){onRemomve(item.like)}}}>삭제</button></td>
                 </tr>
               );
             }
