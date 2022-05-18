@@ -17,6 +17,8 @@ function Body(props) {
   let f = 5;
   let g = 6;
   let j = 9;
+  let start=0;
+  let end=0;
   const [lists, setLists] = useState([ 
         JSON.parse(localStorage.getItem(a)),
         JSON.parse(localStorage.getItem(b)),
@@ -76,6 +78,7 @@ function Body(props) {
           </tr>
         </thead>
         <tbody>
+          {start = Date.now()}
           {
             lists.map((item,index) => {
               return(
