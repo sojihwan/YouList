@@ -42,9 +42,11 @@ function Body(props) {
       f = f - 8;
       g = g - 8;
       j = j - 8;
+      console.log(a,b,c,d,e,f,g,j);
+      
     }
  
-    function nextpage(){  
+    function nextpage(){
       a = a + 8;
       b = b + 8;
       c = c + 8;
@@ -53,6 +55,8 @@ function Body(props) {
       f = f + 8;
       g = g + 8;
       j = j + 8;
+      console.log(a,b,c,d,e,f,g,j);
+      console.log(JSON.parse(localStorage.getItem(a)),JSON.parse(localStorage.getItem(b)),JSON.parse(localStorage.getItem(c)),JSON.parse(localStorage.getItem(d)))
     }
  
     const onRemomve = like => {

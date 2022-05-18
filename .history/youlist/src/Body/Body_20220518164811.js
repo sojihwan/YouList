@@ -42,6 +42,7 @@ function Body(props) {
       f = f - 8;
       g = g - 8;
       j = j - 8;
+      setLists( n => JSON.parse(localStorage.getItem(a)) )
     }
  
     function nextpage(){  
@@ -53,6 +54,8 @@ function Body(props) {
       f = f + 8;
       g = g + 8;
       j = j + 8;
+      setLists( n => JSON.parse(localStorage.getItem(a)) )
+
     }
  
     const onRemomve = like => {
