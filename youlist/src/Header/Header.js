@@ -24,7 +24,6 @@ function Header (){
             name="select" 
             onChange={onChange}
             value={Log}>
-              
           </input>
           </h1>
       </header>
