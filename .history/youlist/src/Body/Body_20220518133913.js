@@ -9,14 +9,14 @@ import { Link } from 'react-router-dom';
 
 function Body(props) {
 
-  let a = 0;
-  let b = 1;
-  let c = 2;
-  let d = 3;
-  let e = 4;
-  let f = 5;
-  let g = 6;
-  let j = 7;
+  var a = 0;
+  var b = 1;
+  var c = 2;
+  var d = 3;
+  var e = 4;
+  var f = 5;
+  var g = 6;
+  var j = 7;
 
   const [lists, setLists] = useState([ 
         JSON.parse(localStorage.getItem(a)),
@@ -42,8 +42,6 @@ function Body(props) {
       f = f - 8;
       g = g - 8;
       j = j - 8;
-      console.log(a,b,c,d,e,f,g,j);
-      console.log(JSON.parse(localStorage.getItem(a)),JSON.parse(localStorage.getItem(b)),JSON.parse(localStorage.getItem(c)),JSON.parse(localStorage.getItem(d)))
     }
  
     function nextpage(){
@@ -55,8 +53,6 @@ function Body(props) {
       f = f + 8;
       g = g + 8;
       j = j + 8;
-      console.log(a,b,c,d,e,f,g,j);
-      console.log(JSON.parse(localStorage.getItem(a)),JSON.parse(localStorage.getItem(b)),JSON.parse(localStorage.getItem(c)),JSON.parse(localStorage.getItem(d)))
     }
  
     const onRemomve = like => {

@@ -9,7 +9,6 @@ import { Link } from 'react-router-dom';
 
 function Body(props) {
 
-  let a = 0;
   let b = 1;
   let c = 2;
   let d = 3;
@@ -42,8 +41,6 @@ function Body(props) {
       f = f - 8;
       g = g - 8;
       j = j - 8;
-      console.log(a,b,c,d,e,f,g,j);
-      console.log(JSON.parse(localStorage.getItem(a)),JSON.parse(localStorage.getItem(b)),JSON.parse(localStorage.getItem(c)),JSON.parse(localStorage.getItem(d)))
     }
  
     function nextpage(){
@@ -55,8 +52,6 @@ function Body(props) {
       f = f + 8;
       g = g + 8;
       j = j + 8;
-      console.log(a,b,c,d,e,f,g,j);
-      console.log(JSON.parse(localStorage.getItem(a)),JSON.parse(localStorage.getItem(b)),JSON.parse(localStorage.getItem(c)),JSON.parse(localStorage.getItem(d)))
     }
  
     const onRemomve = like => {
