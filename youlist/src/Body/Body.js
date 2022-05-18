@@ -3,21 +3,53 @@ import 'bootstrap/dist/css/bootstrap.css';
 import '../CSS/Div.css'
 import '../CSS/Link.css'
 import { Link } from 'react-router-dom';
-//앞으로 해야할 것 setLists([...lists, JSON.parse(localStorage.getItem(`${i}`))]);이게 왜 함수가 끝나야지 되는지 확인
-//JSON.parse(localStorage.getItem(키))에 키를 리스트에서 view로 이동  
+
+//앞으로 해야할거 function beforepage() 와 function nextpage() 함수 LeftNav에서 불러오기 
+//RightNav에서 원하는 페이지로 갈 수 있는 드롭박스 만들기
+
 function Body(props) {
+  var a = 0;
+  var b = 1;
+  var c = 2;
+  var d = 3;
+  var e = 4;
+  var f = 5;
+  var g = 6;
+  var j = 7;
   const [lists, setLists] = useState([ 
-    //  for(var i = 0; i <= localStorage.length-1; i++) {
-        JSON.parse(localStorage.getItem(0)),
-        JSON.parse(localStorage.getItem(1)),
-        JSON.parse(localStorage.getItem(2)),
-        JSON.parse(localStorage.getItem(3)),
-        JSON.parse(localStorage.getItem(4)),
-        JSON.parse(localStorage.getItem(5)),
-        JSON.parse(localStorage.getItem(6))
-    //  }
+        JSON.parse(localStorage.getItem(a)),
+        JSON.parse(localStorage.getItem(b)),
+        JSON.parse(localStorage.getItem(c)),
+        JSON.parse(localStorage.getItem(d)),
+        JSON.parse(localStorage.getItem(e)),
+        JSON.parse(localStorage.getItem(f)),
+        JSON.parse(localStorage.getItem(g)),
+        JSON.parse(localStorage.getItem(j))
     ])
-  
+    function beforepage(){
+      if(a===0){
+        alert('이전 페이지는 없습니다.')
+        return 0;
+      }
+      a = a - 8;
+      b = b - 8;
+      c = c - 8;
+      d = d - 8;
+      e = e - 8;
+      f = f - 8;
+      g = g - 8;
+      j = j - 8;
+    }
+    function nextpage(){
+      a = a + 8;
+      b = b + 8;
+      c = c + 8;
+      d = d + 8;
+      e = e + 8;
+      f = f + 8;
+      g = g + 8;
+      j = j + 8;
+    }
   const onRemomve = like => {
     var i = 0;
     var s
