@@ -16,7 +16,7 @@ function Body(props) {
   let e = 4;
   let f = 5;
   let g = 6;
-  let j = 7;
+  let j = 9;
   const [lists, setLists] = useState([ 
         JSON.parse(localStorage.getItem(a)),
         JSON.parse(localStorage.getItem(b)),
@@ -82,6 +82,7 @@ function Body(props) {
       <table className="table table-striped" style={{ color: "#FFFFFF" }} name="list1" >
         <thead>
           <tr>
+            <th>번호</th>
             <th>이름</th>
             <th>삭제</th>
           </tr>
@@ -91,6 +92,7 @@ function Body(props) {
             lists.map((item,index) => {
               return(
                 <tr key={index}>
+                  <td className='num'>{index+1}</td>
                   <td> 
                     <Link to="/View" className="Link">
                       <b onClick={() =>{if(item != null){props.setValue(item.like)}}}>

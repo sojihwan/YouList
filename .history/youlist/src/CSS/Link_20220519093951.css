@@ -1,0 +1,19 @@
+.Link{
+  text-decoration:none;
+  color:#FFFFFF;
+}
+.Link:hover{
+  text-decoration:none;
+  color:#FFFFFF;
+}
+.Link1{
+  text-decoration:none;
+  color:#000000;
+}
+.Link1:hover{
+  text-decoration:none;
+  color:#000000;
+}
+#num{
+  color: rgb(255, 255, 255);
+}
