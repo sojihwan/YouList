@@ -38,19 +38,17 @@ function Body(props) {
       f = f - 8;
       g = g - 8;
       j = j - 8;
-      NaxtsetLists()
+      con
     }
-    function NaxtsetLists(){
-      setLists([
-        JSON.parse(localStorage.getItem(a)),
-        JSON.parse(localStorage.getItem(b)),
-        JSON.parse(localStorage.getItem(c)),
-        JSON.parse(localStorage.getItem(d)),
-        JSON.parse(localStorage.getItem(e)),
-        JSON.parse(localStorage.getItem(f)),
-        JSON.parse(localStorage.getItem(g)),
-        JSON.parse(localStorage.getItem(j))  
-      ]);
+    function addsetLists(){
+      setLists(JSON.parse(localStorage.getItem(a)));
+      setLists(JSON.parse(localStorage.getItem(b)));
+      setLists(JSON.parse(localStorage.getItem(c)));
+      setLists(JSON.parse(localStorage.getItem(d)));
+      setLists(JSON.parse(localStorage.getItem(e)));
+      setLists(JSON.parse(localStorage.getItem(f)));
+      setLists(JSON.parse(localStorage.getItem(g)));
+      setLists(JSON.parse(localStorage.getItem(j)));
     }
     function nextpage(){  
       a = a + 8;
@@ -61,8 +59,7 @@ function Body(props) {
       f = f + 8;
       g = g + 8;
       j = j + 8;
-      console.log(a)
-      NaxtsetLists()
+      addsetLists()
     }
  
     const onRemomve = like => {

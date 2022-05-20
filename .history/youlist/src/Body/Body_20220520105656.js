@@ -28,6 +28,7 @@ function Body(props) {
     function beforepage(){
       if(a===0){
         alert('이전 페이지는 없습니다.')
+        console.log(lists)
         return 0;
       }
       a = a - 8;
@@ -38,10 +39,9 @@ function Body(props) {
       f = f - 8;
       g = g - 8;
       j = j - 8;
-      NaxtsetLists()
     }
-    function NaxtsetLists(){
-      setLists([
+    function addsetLists(){
+      setLists(
         JSON.parse(localStorage.getItem(a)),
         JSON.parse(localStorage.getItem(b)),
         JSON.parse(localStorage.getItem(c)),
@@ -49,8 +49,8 @@ function Body(props) {
         JSON.parse(localStorage.getItem(e)),
         JSON.parse(localStorage.getItem(f)),
         JSON.parse(localStorage.getItem(g)),
-        JSON.parse(localStorage.getItem(j))  
-      ]);
+        JSON.parse(localStorage.getItem(b)),  
+      );
     }
     function nextpage(){  
       a = a + 8;
@@ -61,8 +61,7 @@ function Body(props) {
       f = f + 8;
       g = g + 8;
       j = j + 8;
-      console.log(a)
-      NaxtsetLists()
+      addsetLists()
     }
  
     const onRemomve = like => {

@@ -28,6 +28,7 @@ function Body(props) {
     function beforepage(){
       if(a===0){
         alert('이전 페이지는 없습니다.')
+        console.log(lists)
         return 0;
       }
       a = a - 8;
@@ -38,9 +39,8 @@ function Body(props) {
       f = f - 8;
       g = g - 8;
       j = j - 8;
-      NaxtsetLists()
     }
-    function NaxtsetLists(){
+    function addsetLists(){
       setLists([
         JSON.parse(localStorage.getItem(a)),
         JSON.parse(localStorage.getItem(b)),
@@ -61,8 +61,7 @@ function Body(props) {
       f = f + 8;
       g = g + 8;
       j = j + 8;
-      console.log(a)
-      NaxtsetLists()
+      addsetLists()
     }
  
     const onRemomve = like => {

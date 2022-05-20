@@ -38,7 +38,7 @@ function Body(props) {
       f = f - 8;
       g = g - 8;
       j = j - 8;
-      NaxtsetLists()
+      addsetLists()
     }
     function NaxtsetLists(){
       setLists([
@@ -62,7 +62,7 @@ function Body(props) {
       g = g + 8;
       j = j + 8;
       console.log(a)
-      NaxtsetLists()
+      addsetLists()
     }
  
     const onRemomve = like => {

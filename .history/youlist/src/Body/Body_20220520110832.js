@@ -38,9 +38,9 @@ function Body(props) {
       f = f - 8;
       g = g - 8;
       j = j - 8;
-      NaxtsetLists()
+      addsetLists()
     }
-    function NaxtsetLists(){
+    function setLists(){
       setLists([
         JSON.parse(localStorage.getItem(a)),
         JSON.parse(localStorage.getItem(b)),
@@ -62,7 +62,7 @@ function Body(props) {
       g = g + 8;
       j = j + 8;
       console.log(a)
-      NaxtsetLists()
+      addsetLists()
     }
  
     const onRemomve = like => {
