@@ -4,9 +4,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 function View (props){
   console.log(props)
-  let an = 0
-  const value = JSON.parse(localStorage.getItem(`${props.value+an}`));
-  const like =`https://www.youtube.com/embed/${value.like}`
+  
+  const like =`https://www.youtube.com/embed/${props.value}`
   return(
     <div className='DIVVIEW'>
 

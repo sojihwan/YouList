@@ -100,7 +100,7 @@ export function Body(props) {
                 <tr key={index}>
                   <td> 
                     <Link to="/View" className="Link">
-                      <b onClick={() =>{if(item != null){props.setValue(index)}}}>
+                      <b onClick={() =>{if(item != null){props.setValue(item.index)}}}>
                        {item===null ? '업로드를 해주세요' : item.title }
                       </b>
                     </Link>

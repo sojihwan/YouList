@@ -3,8 +3,10 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { Link } from 'react-router-dom';
 import '../CSS/Div.css'
 import '../CSS/Link.css'
+import Body from '../Body/Body';
 
 function LeftNav (props){
+  
   return(
     <nav className="LeftNav">
       <h2 className='LeftH1'>
@@ -13,10 +15,12 @@ function LeftNav (props){
           <Link to="/"className="Link1"><b>리스트로</b></Link><br/>
         </div>
         <div className='LeftNavDiv'>
-          <b><Link to="/View" className="Link1" ne={{no : -1}}>이전<br/>영상</Link></b>
+          <b onClick={Body.beforepage}>이전</b><br/>
+          <b onClick={Body.beforepage}>영상</b>
         </div>
         <div className='LeftNavDiv'>
-          <b><Link to="/View" className="Link1" ne={{no : 1}}>다음<br/>영상</Link></b>
+          <b onClick={Body.nextpage}>다음</b><br/>
+          <b onClick={Body.nextpage}>페이지</b>
         </div>
         </h2>
     </nav>

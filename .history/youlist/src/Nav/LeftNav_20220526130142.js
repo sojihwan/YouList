@@ -13,10 +13,10 @@ function LeftNav (props){
           <Link to="/"className="Link1"><b>리스트로</b></Link><br/>
         </div>
         <div className='LeftNavDiv'>
-          <b><Link to="/View" className="Link1" ne={{no : -1}}>이전<br/>영상</Link></b>
+          <b><Link to="/View" className="Link1">이전<br/>영상</Link></b>
         </div>
         <div className='LeftNavDiv'>
-          <b><Link to="/View" className="Link1" ne={{no : 1}}>다음<br/>영상</Link></b>
+          <b><Link to="/View" className="Link1">다음<br/>영상</Link></b>
         </div>
         </h2>
     </nav>

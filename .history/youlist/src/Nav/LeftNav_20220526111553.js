@@ -5,6 +5,12 @@ import '../CSS/Div.css'
 import '../CSS/Link.css'
 
 function LeftNav (props){
+  function NV(){
+
+  }
+  function BV(){
+    
+  }
   return(
     <nav className="LeftNav">
       <h2 className='LeftH1'>
@@ -13,10 +19,10 @@ function LeftNav (props){
           <Link to="/"className="Link1"><b>리스트로</b></Link><br/>
         </div>
         <div className='LeftNavDiv'>
-          <b><Link to="/View" className="Link1" ne={{no : -1}}>이전<br/>영상</Link></b>
+          <b onClick={NV(props)}><Link to="/"className="Link1">이전<br/>영상</Link></b>
         </div>
         <div className='LeftNavDiv'>
-          <b><Link to="/View" className="Link1" ne={{no : 1}}>다음<br/>영상</Link></b>
+          <b onClick={BV(props)}><다음<br/>영상</b>
         </div>
         </h2>
     </nav>

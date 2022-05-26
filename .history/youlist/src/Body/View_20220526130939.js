@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 function View (props){
   console.log(props)
   let an = 0
+  an = 
   const value = JSON.parse(localStorage.getItem(`${props.value+an}`));
   const like =`https://www.youtube.com/embed/${value.like}`
   return(

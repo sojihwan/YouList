@@ -2,9 +2,12 @@ import '../CSS/Div.css'
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 
-function View (props){
+function View (props,ne){
   console.log(props)
   let an = 0
+  if(props.ne !=null){
+    an = props.ne.no; 
+  }
   const value = JSON.parse(localStorage.getItem(`${props.value+an}`));
   const like =`https://www.youtube.com/embed/${value.like}`
   return(

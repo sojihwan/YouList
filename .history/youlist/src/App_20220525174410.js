@@ -15,12 +15,12 @@ function App() {
   const [value, setValue] = useState("");
   return (
     <div style={{backgroundColor:"black"}}>
-      <Header/>
+      <Header></Header>
       <div style={{width:'70%',position:'absolute',top:'220',left:'15%'}}>
-      <RightNav/>
+      <RightNav></RightNav>
       <Route path ="/View"  component={() => <View value={value}/>}/>
       <Route path ="/Uplode" component = {()=> <Uplode/>} />
-      <LeftNav setValue={setValue}/>
+      <LeftNav setValue={setValue}></LeftNav>
       <Route path ="/" component = {()=> <Body setValue={setValue}/>} exact/>
       </div>
     </div>
