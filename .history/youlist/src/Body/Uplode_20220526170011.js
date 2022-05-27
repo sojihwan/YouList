@@ -14,10 +14,13 @@ function Uplode(props) {
 
   const onChange = (e) => {
     const { name, value } = e.target;
+    if(value ==){
+        
+    }
     setLog({
       
       ...Log,
-      [name]: value.replace('&','`'),
+      [name]: value,
     });
     console.log(Log);
   };

@@ -16,10 +16,9 @@ function Uplode(props) {
     const { name, value } = e.target;
     setLog({
       
-      ...Log,
-      [name]: value.replace('&','`'),
+      ...Log.,
+      [name]: value,
     });
-    console.log(Log);
   };
 
   const onReset = () => {

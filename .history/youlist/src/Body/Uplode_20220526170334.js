@@ -19,7 +19,7 @@ function Uplode(props) {
       ...Log,
       [name]: value.replace('&','`'),
     });
-    console.log(Log);
+    console.log(Log.replace('&', '@'));
   };
 
   const onReset = () => {

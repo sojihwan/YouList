@@ -6,7 +6,7 @@ function View (props){
   console.log(props)
   let an = 0
   const value = JSON.parse(localStorage.getItem(`${props.value+an}`));
-  const like =`https://www.youtube.com/embed/${value.like.replace('`','&')}`
+  const like =`https://www.youtube.com/embed/${value.like.replace('`','`')}`
   return(
     <div className='DIVVIEW'>
 

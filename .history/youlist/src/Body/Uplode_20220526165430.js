@@ -14,10 +14,10 @@ function Uplode(props) {
 
   const onChange = (e) => {
     const { name, value } = e.target;
+    ifl
     setLog({
-      
       ...Log,
-      [name]: value.replace('&','`'),
+      [name]: value,
     });
     console.log(Log);
   };
