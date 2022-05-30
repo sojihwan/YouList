@@ -41,7 +41,7 @@ function Uplode(props) {
           value={title} 
       />
        <br/>
-      <h3>맨 뒤 / 다음 링크</h3><br/>
+      <h3>맨 뒤 / 다음 링크(꺽쇠,&들어가 있으면 X)</h3><br/>
       <input 
         type="text"
         style={{width:"70%"}} 

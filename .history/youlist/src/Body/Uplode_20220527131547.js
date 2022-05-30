@@ -40,8 +40,7 @@ function Uplode(props) {
           onChange={onChange} 
           value={title} 
       />
-       <br/>
-      <h3>맨 뒤 / 다음 링크</h3><br/>
+       <br/>)</h3><br/>
       <input 
         type="text"
         style={{width:"70%"}} 
